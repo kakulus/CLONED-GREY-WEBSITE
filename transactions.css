@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.body6 {
+  position: relative;
+  top: 60px;
+  padding: 20px;
+}
+.transaction-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.transaction-main {
+  display: flex;
+  flex-direction: column;
+}
+.transaction-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.transaction-display select {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 180px;
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 0px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.stil-d {
+  font-size: 16px;
+  position: relative;
+  top: 10px;
+  font-weight: 700;
+  display: none;
+}
+.transaction-date {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  font-family: "Aeonik";
+  font-weight: lighter;
+  font-size: 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 0px;
+  border-radius: 8px;
+}
+.transaction-rec {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+}
+.transaction-rec .trans-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Aeonik";
+  font-weight: lighter;
+  font-size: 15px;
+  color: #333333;
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 400px;
+  height: 100%;
+  margin: auto;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+}
+@media only screen and (min-width:650px) {
+  .transaction-main {
+    display: flex;
+    flex-direction: row;
+  }
+  .body6 {
+    position: relative;
+    top: 120px;
+    padding: 10px;
+    padding: 20px;
+  }
+  .stil-d {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .transaction-main {
+    display: flex;
+    flex-direction: row;
+  }
+  .body6 {
+    position: relative;
+    top: 120px;
+    padding: 10px;
+    padding: 20px;
+  }
+  .stil-d {
+    display: inline;
+  }
+
+}

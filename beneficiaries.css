@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.hide{
+  display: none;
+}
+.body7 {
+  position: relative;
+  top: 120px;
+  padding: 20px;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+}
+.benefit-item {
+  flex: 1 1 0%;
+  z-index: 9;
+}
+.benefit-item .benefit-title {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #808080;
+  padding: 10px 17px 14px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  background: transparent;
+}
+.benefit-title.active {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #3d87f5;
+  margin-bottom: 0px;
+}
+.benefit-title.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: rgb(61, 135, 245);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+  border-radius: 4px;
+}
+
+.benefit-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.benefit-buttons .benefit-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.benefit-buttons .benefit-date select {
+  margin-top: 20px;
+  width: 200px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 0px;
+  border-radius: 8px;
+  text-align: center;
+}
+.benefit-buttons .benefit-btn {
+  width: 30%;
+  padding: 15px 0px;
+  margin-top: 20px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  align-self: flex-start;
+}
+.benefit-record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.benefit-form {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid rgb(208, 208, 208);
+}
+.benefit-cards {
+  margin-top: 40px;
+}
+.benefit-form-card {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid rgb(208, 208, 208);
+}
+
+@media only screen and (min-width: 750px) {
+  .benefit-buttons .benefit-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .benefit-buttons .benefit-date select {
+    margin-right: 10px;
+  }
+}

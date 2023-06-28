@@ -1,0 +1,470 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.Body3 {
+  position: relative;
+  top: 150px;
+  padding: 10px;
+}
+.balance-section {
+  background-color: #ffffff;
+  min-height: 400px;
+  height: 100%;
+  margin: auto;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 7px;
+  padding: 20px;
+}
+
+.btn-sec {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+
+.btn-sec .country {
+  border-radius: 4.23077px;
+  padding: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  margin-right: 8px;
+  height: 36px;
+  border: 1px solid rgb(231, 240, 254);
+  line-height: 0;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.btn-sec .country img {
+  margin-right: 4.5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 83px;
+}
+.btn-sec .bal_active{
+  border: 1px solid rgb(61, 135, 245);
+  background-color: rgb(240, 246, 254);
+}
+.balance-section .addings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 10px 20px 10px;
+}
+.balance-section .adding {
+  width: 100%;
+  height: 50px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 6px;
+}
+.btn-sec-bal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.avail-pend {
+  background: rgb(247, 247, 247);
+  border-radius: 10px;
+  min-height: 200px;
+  max-height: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+  box-sizing: border-box;
+}
+.avail-pend .title {
+  font-size: 12px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+  padding: px;
+}
+.avail-pend .title .avail_pend_quest {
+  font-size: 12px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+  border-radius: 100px;
+  padding: 0px 4px;
+  margin-left: 3px;
+  background-color: #e6e6e6;
+  text-align: center;
+}
+.avail-pend h3 {
+  font-size: 32px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.bal-act-btn-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bal-act-btn {
+  width: 100%;
+  border-radius: 4px;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 18px;
+  font-family: "Aeonik", sans-serif;
+  background: rgb(255, 255, 255);
+  color: rgb(61, 135, 245);
+  border: 0.5px solid rgb(61, 135, 245);
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.bal-act-btn,
+.chg3,
+.chg4,
+.chg5 {
+  margin-left: 5px;
+}
+.for-acc {
+  margin-top: 30px;
+  flex: 1 1 0%;
+  height: 157px;
+  min-height: 130px;
+  margin-right: 0px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  background-color: #ecebff;
+}
+.for-acc article {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 4px;
+  justify-content: space-around;
+}
+.for-acc article h4 {
+  font-size: 25px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.for-acc article p {
+  font-size: 20px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+  margin: 10px 0px;
+}
+.for-acc article .rua {
+  background-color: #f2f2f2;
+  color: #bfbfbf;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  margin-bottom: 7px;
+}
+.for-acc img {
+  position: relative;
+  bottom: 8px;
+}
+.trans-rec {
+  padding: 20px;
+}
+.rec-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  background-color: #ffffff;
+  min-height: 400px;
+  height: 100%;
+  margin: auto;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+}
+.rec-form p {
+  align-self: flex-start;
+  position: relative;
+  bottom: 120px;
+  left: 25px;
+  font-size: 20px;
+}
+@media only screen and (min-width: 750px) {
+  .Body3 {
+    position: relative;
+    top: 210px;
+    padding: 10px;
+  }
+  .balance-section {
+    background-color: #ffffff;
+    min-height: 400px;
+    height: 100%;
+    margin: auto;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 7px;
+    padding: 20px;
+  }
+  .btn-sec-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .btn-sec {
+    display: flex;
+    justify-content: space-around;
+    justify-self: flex-end;
+  }
+  .btn-sec .country {
+    border-radius: 4.23077px;
+    padding: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: rgb(255, 255, 255);
+    margin-right: 20px;
+    height: 36px;
+    border: 1px solid rgb(231, 240, 254);
+    line-height: 12px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+  }
+  .btn-sec .country img {
+    margin-right: 4.5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 83px;
+  }
+  .btn-sec .bal_active{
+    border: 1px solid rgb(61, 135, 245);
+    background-color: rgb(240, 246, 254);
+  }
+  .balance-section .addings {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 10px 20px 10px;
+    width: 100%;
+  }
+  .balance-section .adding {
+    width: 100%;
+    height: 50px;
+    background: rgb(61, 135, 245);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+  .btn-sec-bal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .avail-pend {
+    background: rgb(247, 247, 247);
+    border-radius: 10px;
+    min-height: 200px;
+    max-height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 30px;
+    box-sizing: border-box;
+    margin-right: 10px;
+  }
+  .avail-pend .title {
+    font-size: 12px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: lighter;
+    padding: px;
+  }
+  .avail-pend .title .avail_pend_quest {
+    font-size: 12px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: lighter;
+    border-radius: 100px;
+    padding: 0px 4px;
+    margin-left: 3px;
+    background-color: #e6e6e6;
+    text-align: center;
+  }
+  .avail-pend h3 {
+    font-size: 32px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+  }
+  .bal-act-btn-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .bal-act-btn {
+    width: 100%;
+    margin: 10px;
+    border-radius: 4px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 12px 18px;
+    font-family: "Aeonik", sans-serif;
+    background: rgb(255, 255, 255);
+    color: rgb(61, 135, 245);
+    border: 0.5px solid rgb(61, 135, 245);
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .for-acc {
+    margin-top: 30px;
+    flex: 1 1 0%;
+    height: 157px;
+    min-height: 130px;
+    margin-right: 0px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    background-color: #ecebff;
+  }
+  .for-acc article {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 4px;
+    justify-content: space-around;
+  }
+  .for-acc article h4 {
+    font-size: 25px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+  }
+  .for-acc article p {
+    font-size: 20px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: lighter;
+    margin: 10px 0px;
+  }
+  .for-acc article .rua {
+    background-color: #f2f2f2;
+    color: #bfbfbf;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 7px;
+  }
+  .for-acc img {
+    position: relative;
+    bottom: 8px;
+  }
+  .trans-rec {
+    padding: 20px;
+  }
+  .rec-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Aeonik";
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    background-color: #ffffff;
+    min-height: 400px;
+    height: 100%;
+    margin: auto;
+    border: 1px solid rgb(208, 208, 208);
+    border-radius: 6px;
+  }
+  .rec-form p {
+    align-self: flex-start;
+    position: relative;
+    bottom: 120px;
+    left: 25px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Body3 {
+    display: block;
+  }
+  .hidden {
+    display: none;
+  }
+  .btn-sec .bal_active{
+    border: 1px solid rgb(61, 135, 245);
+    background-color: rgb(240, 246, 254);
+  }
+}

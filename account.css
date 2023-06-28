@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.body4 {
+  position: relative;
+  top: 70px;
+  border-radius: 7px;
+}
+.FA {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+.tab {
+  display: flex;
+  padding-bottom: 0px;
+  overflow: initial;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 12;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.tab-item {
+  flex: 1 1 0%;
+  min-width: max-content;
+  z-index: 9;
+}
+.tab-title {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #808080;
+  padding: 10px 17px 14px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  background: transparent;
+}
+.tab-title.active {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #3d87f5;
+  margin-bottom: 0px;
+}
+.tab-title.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: rgb(61, 135, 245);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+  border-radius: 4px;
+}
+.profile-page::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: rgb(229, 233, 241);
+  bottom: 0px;
+  z-index: 4;
+  left: 0px;
+  right: 0px;
+  padding: 0px 10px;
+}
+.tab-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.request-countries {
+  display: flex;
+  flex-direction: column;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  min-height: 150px;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid rgb(229, 233, 241);
+  overflow: hidden;
+  background: rgb(203, 240, 255);
+  margin-top: 20px;
+}
+.request-countries img {
+  display: none;
+}
+.request-countries .rc img {
+  display: inline;
+  width: 20px;
+  margin: 3px 5px 0px 5px;
+}
+.rc h3 {
+  font-size: 23px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  padding: 5px;
+}
+.rc p {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+  padding: 5px;
+}
+.rc button {
+  color: white;
+  padding: 12px;
+  background-color: #3d87f5;
+  border-radius: 8px;
+  border: none;
+  margin: 5px 0px 0px 10px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.euroform {
+  align-self: center;
+  display: flex;
+  position: fixed;
+  bottom: 0%;
+  z-index: 14;
+  transition: all 300ms ease;
+}
+.euroformbox {
+  display: flex;
+  height: 100%;
+  min-height: 450px;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px 15px 0px 0px;
+  transition: all 300ms ease;
+}
+.eurohead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.eurohead h3 {
+  font-family: "Aeonik", sans-serif;
+  font-size: 20px;
+  color: #27303d;
+}
+.eurohead .bank-box {
+  background-color: #f0f6fe;
+  color: #3d87f5;
+  padding: 3px 6px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.euroconfirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffae6;
+  border-radius: 10px;
+}
+.euroconfirm h4 {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.euroconfirm p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 14px;
+  color: #808080;
+  text-align: center;
+
+  line-height: 18px;
+  margin: 0px 10px 10px 10px;
+}
+.euroform1,
+.euroform2 {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  padding: 1.25rem 0px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5px 0px;
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+.euroform2 span {
+  font-weight: bold;
+}
+.euroform1 span {
+  font-weight: bold;
+}
+.eurosubmit {
+  width: 100%;
+  height: 55px;
+  background-color: #3d87f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  font-family: "Aeonik", sans-serif;
+  margin: 20px 0px;
+}
+.euroexit {
+  color: #3d87f5;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Aeonik", sans-serif;
+  cursor: pointer;
+}
+
+.exit_btn {
+  display: none;
+  cursor: pointer;
+
+}
+
+.RA {
+  padding: 20px;
+}
+.statment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Aeonik";
+  font-weight: bold;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  background-color: #ffffff;
+  height: 200px;
+  width: 340px;
+  margin: auto;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+}
+.icon {
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 100px;
+  margin: 0px 0px 40px 30px;
+}
+.icon i {
+  color: #3d87f5;
+}
+.RA h3 {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 650px) {
+  .request-countries .ebuka {
+    display: block;
+    position: relative;
+    left: 20px;
+  }
+  .request-countries .ebus {
+    transform: rotate(-20deg);
+  }
+  .request-countries {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rc h3 {
+    font-size: 23px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .rc p {
+    font-size: 17px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: lighter;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .rc button {
+    color: white;
+    padding: 12px;
+    background-color: #3d87f5;
+    border-radius: 8px;
+    border: none;
+    margin: 5px 0px 0px 10px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .body4 {
+    position: relative;
+    top: 50px;
+    border-radius: 7px;
+  }
+  .euroform {
+    align-self: center;
+    display: flex;
+    position: fixed;
+    bottom: 10%;
+    z-index: 14;
+  }
+  .euroformbox {
+    width: 400px;
+    border-radius: 10px;
+  }
+  .exit_btn {
+    display: block;
+    height: 25px;
+    padding: 3px 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin-left: 10px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 13;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .body4 {
+    position: relative;
+    top: 120px;
+    border-radius: 7px;
+  }
+  .hide {
+    display: none;
+  }
+  .euroform {
+    align-self: center;
+    display: flex;
+    position: fixed;
+    bottom: 3%;
+    z-index: 14;
+  }
+  .euroformbox {
+    width: 400px;
+    border-radius: 10px;
+  }
+}

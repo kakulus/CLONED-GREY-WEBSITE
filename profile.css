@@ -1,0 +1,786 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f7f7f7;
+}
+.body9 {
+  position: relative;
+  top: 105px;
+  border-radius: 7px;
+  padding: 20px;
+}
+.profile-item {
+  flex: 1 1 0%;
+  z-index: 9;
+  margin-bottom: 10px;
+}
+.profile-item .profile-title {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #808080;
+  padding: 10px 10px 15px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  background: transparent;
+}
+.profile-title.active {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #3d87f5;
+  margin-bottom: 0px;
+}
+.profile-title.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: rgb(61, 135, 245);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+  border-radius: 4px;
+}
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 500px;
+  height: 100%;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.p-info h3 {
+  color: #bababa;
+  font-size: 12px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 10px 10px;
+}
+.p-dic {
+  display: flex;
+  flex-direction: column;
+}
+.p-name {
+  margin-bottom: 40px;
+}
+.name {
+  margin: 20px 0px;
+}
+.name p {
+  color: #333333;
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.name span {
+  color: #808080;
+  font-size: 13px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.p-other-name {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.p-others {
+  display: flex;
+  flex-direction: column;
+}
+.p-others .f_name,
+.M_name,
+.L_name {
+  color: #333333;
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+}
+.p-others input[type="text"] {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 10px;
+  cursor: not-allowed;
+}
+.p-tag {
+  display: flex;
+  flex-direction: column;
+}
+.p-tag1 {
+  display: flex;
+  flex-direction: row;
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.p-tag1-n {
+  background-color: rgb(231, 240, 254);
+  border-radius: 5px;
+  color: rgb(61, 135, 245);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 0.188rem 0.5rem;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.p-tag span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.p-tag2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  color: #bababa;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.p-email {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.email p {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+}
+.email span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.p-email input[type="text"] {
+  width: 100%;
+  cursor: not-allowed;
+  color: rgb(186, 186, 186);
+  border-radius: 10px;
+  height: 45px;
+  border: none;
+  background: rgb(242, 242, 242) !important;
+  border: 1px solid rgb(242, 242, 242) !important;
+  padding: 20px;
+  margin: 20px 0px;
+  cursor: not-allowed;
+}
+
+.p-phone {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.phone p {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+}
+.phone span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.p-phone input[type="text"] {
+  width: 100%;
+  cursor: not-allowed;
+  color: rgb(186, 186, 186);
+  border-radius: 10px;
+  height: 45px;
+  border: none;
+  background: rgb(242, 242, 242) !important;
+  border: 1px solid rgb(242, 242, 242) !important;
+  padding: 20px;
+  margin: 20px 0px;
+}
+.save-change {
+  width: 100%;
+  border-radius: 4px;
+  height: 50px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 18px;
+  max-width: 9.25rem;
+}
+.profile_NS {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 500px;
+  height: 100%;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.logins {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.login p {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+}
+.login span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.input-logins {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.input-logins input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+.input-logins p {
+  display: inline;
+  font-size: 16px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+input[type="checkbox"]:checked ~ .checkmark {
+  background-color: rgb(61, 135, 245);
+}
+
+.Transaction {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.transactions p {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+}
+.transactions span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.input-trans {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.input-trans input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
+.input-trans p {
+  display: inline;
+  font-size: 16px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+input[type="checkbox"]:checked ~ .checkmark {
+  background-color: rgb(61, 135, 245);
+}
+.input-trans p {
+  display: inline;
+  font-size: 16px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.price p {
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+}
+.price span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.input-prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0px;
+}
+.input-prices input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+
+.input-prices p {
+  display: inline;
+  font-size: 16px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+input[type="checkbox"]:checked ~ .checkmark {
+  background-color: rgb(61, 135, 245);
+}
+.profile_SEC {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 400px;
+  height: 100%;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+  width: 100%;
+  padding: 25px;
+  gap: 45px;
+  margin-bottom: 20px;
+}
+.p-SEC {
+  display: flex;
+  flex-direction: column;
+}
+.p-sec {
+  display: flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 17px;
+  font-family: "Aeonik", sans-serif;
+  margin: 5px 0px 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.p-sec-head {
+  display: flex;
+  flex-direction: row;
+}
+.p-sec-n {
+  background-color: rgb(231, 240, 254);
+  border-radius: 5px;
+  color: rgb(61, 135, 245);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 0.188rem 0.5rem;
+  font-weight: bold;
+  margin-left: 4px;
+}
+.p-sec span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 5px 0px 8px;
+}
+.p-sec2 {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  color: #bababa;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 27px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.SEC_pas {
+  display: flex;
+  flex-direction: column;
+}
+.sec_pas p,
+.sec_sess p {
+  font-size: 16px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.sec_pas,
+.sec_sess span {
+  font-size: 16px;
+  color: #808080;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.sec_change_pass button,
+.sec_login_activity button {
+  border-radius: 4px;
+  height: 50px;
+  font-weight: 600;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 18px;
+  background: transparent;
+  color: rgb(61, 135, 245);
+  width: max-content;
+  font-size: 0.875rem;
+  border: 1px solid transparent !important;
+}
+.profile_LT {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.profile_LT .withdrawal_form,
+.deposit_form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+  padding: 15px;
+  transition: height 0.2s;
+  margin-bottom: 60px;
+}
+.profile_LT .withdrawal_form_head,
+.deposit_form_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.profile_LT .wft,
+.dft {
+  font-size: 20px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+}
+.profile_LT .wft,
+.dft img {
+  position: relative;
+  top: 6px;
+  right: 5px;
+}
+.withdrawal_form_tail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: height 0.2s;
+}
+.deposit_form_tail {
+  display: flex;
+  flex-direction: column;
+  transition: height 0.2s;
+}
+.deposit_form_tail .foreign_acc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.deposit_form_tail h3 {
+  font-size: 21px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.deposit_form_tail .foreign_acc p {
+  font-size: 16px;
+  color: #5e6c84;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin: 15px 0px;
+}
+.deposit_form_tail .foreign_acc p img {
+  position: relative;
+  top: 3px;
+  right: 7px;
+}
+.withdrawal_form_tail .withdrawal_daily_limit,
+.withdrawal_monthly_limit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.withdrawal_form_tail .daily_usage,
+.monthly_usage {
+  display: flex;
+  flex-direction: row;
+}
+.withdrawal_form_tail p {
+  font-size: 14px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin-right: 12px;
+}
+.withdrawal_form_tail .daily-range,
+.monthly-range {
+  height: 12px;
+  background: rgb(235, 236, 240);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.withdrawal_form_tail .withdrawal_daily_limit,
+.withdrawal_monthly_limit span {
+  font-size: 14px;
+  color: #5e6c84;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.deposit_form_tail .deposit_daily_limit,
+.deposit_monthly_limit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.deposit_form_tail .daily_usage,
+.monthly_usage {
+  display: flex;
+  flex-direction: row;
+}
+.deposit_form_tail p {
+  font-size: 14px;
+  color: #333333;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+  margin-right: 12px;
+}
+.deposit_form_tail .daily-range,
+.monthly-range {
+  height: 12px;
+  background: rgb(235, 236, 240);
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.deposit_form_tail .deposit_daily_limit,
+.deposit_monthly_limit span {
+  font-size: 14px;
+  color: #5e6c84;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 600;
+}
+.deposit_sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.isOpen {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+.hide {
+  display: none;
+}
+@media only screen and (min-width: 750px) {
+  .hide {
+    display: none;
+  }
+  .withdrawal_form_tail p {
+    font-size: 16px;
+    color: #333333;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .p-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .p-tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .p-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .p-phone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profile-item .profile-title {
+    font-size: 15px;
+    padding: 10px 18px 15px;
+  }
+  .profile_NS .Logins,
+  .Transaction,
+  .prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .profile_NS .login,
+  .transactions,
+  .price {
+    margin-right: 50px;
+  }
+  .p-SEC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .SEC_Sess {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .SEC_pas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hide {
+    display: none;
+  }
+}

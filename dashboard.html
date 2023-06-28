@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="Balance.css" />
+    <link rel="stylesheet" href="Home.css" />
+    <link rel="stylesheet" href="account.css" />
+    <link rel="stylesheet" href="invoices.css" />
+    <link rel="stylesheet" href="transactions.css" />
+    <link rel="stylesheet" href="beneficiaries.css" />
+    <link rel="stylesheet" href="virtual.css" />
+    <link rel="stylesheet" href="Referral.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="Nav">
+        <div class="nav-img"><img src="./logo.svg" alt="" /></div>
+        <div class="nav-bar">
+          <a href="" class="Home-page-btn act_ive MB">
+            <img src="./homeicon.svg" alt="" /> Home</a
+          >
+          <a href="" class="Balance-page-btn MB">
+            <img src="balancd-icon.svg" alt="" /> Balances</a
+          >
+          <a href="#" class="Accrec-page-btn MB"
+            ><img src="acc&rec.svg" alt="" /> Accounts & Reports</a
+          >
+          <a href="" class="invoice-page-btn MB"
+            ><img src="after acc.svg" alt="" /> Invoices</a
+          >
+          <a href="" class="transaction-page-btn MB"
+            ><img src="transactions.svg" alt="" /> Transaction</a
+          >
+          <a href="" class="MB virtual-page-btn"
+            ><img src="virtual-card.svg" alt="" /> Vitrual Cards</a
+          >
+          <a href="" class="MB beneficiaries-page-btn">
+            <img src="./beneficiariees.svg" alt="" /> Beneficiaries</a
+          >
+          <a href="" class="MB referral-page-btn"
+            ><img src="./ref-icon-menu.svg" alt="" /> Referrals</a
+          >
+          <a href="" class="MB profile-page-btn"
+            ><img src="profile-icon.svg" alt="" /> Profile</a
+          >
+          <a href="" class="MB"
+            ><img src="./logout-icon.svg" alt="" /> Logout</a
+          >
+        </div>
+        <div class="nav-foot"><span>ON</span> Obazee Nelly</div>
+      </div>
+
+      <div class="fixed-dropdown hide-menu">
+        <div class="dropdownmenu hide-menu">
+          <div class="nav-img"><img src="./logo.svg" alt="" /></div>
+          <div class="nav-bar">
+            <a href="" class="drop-Home-page-btn act_ive MB">
+              <img src="./homeicon.svg" alt="" /> Home</a
+            >
+            <a href="" class="drop-Balance-page-btn MB">
+              <img src="balancd-icon.svg" alt="" /> Balances</a
+            >
+            <a href="" class="drop-Accrec-page-btn MB"
+              ><img src="acc&rec.svg" alt="" /> Accounts & Reports</a
+            >
+            <a href="" class="drop-invoice-page-btn MB"
+              ><img src="after acc.svg" alt="" /> Invoices</a
+            >
+            <a href="" class="MB drop-transaction-page-btn"
+              ><img src="transactions.svg" alt="" /> Transaction</a
+            >
+            <a href="" class="MB drop-virtual-page-btn"
+              ><img src="virtual-card.svg" alt="" /> Vitrual Cards</a
+            >
+            <a href="" class="MB drop-beneficiaries-page-btn">
+              <img src="./beneficiariees.svg" alt="" /> Beneficiaries</a
+            >
+            <a href="" class="MB drop-referral-page-btn"
+              ><img src="./ref-icon-menu.svg" alt="" /> Referrals</a
+            >
+            <a href="" class="MB drop-profile-page-btn"
+              ><img src="profile-icon.svg" alt="" /> Profile</a
+            >
+            <a href="" class="MB"
+              ><img src="./logout-icon.svg" alt="" /> Logout</a
+            >
+          </div>
+          <div class="nav-foot"><span>ON</span> Obazee Nelly</div>
+        </div>
+      </div>
+      <div class="Body">
+        <div class="top">
+          <div class="top-Left">
+            <div class="top-left">
+              <h1 class="Name-change"><span>Welcome,</span> Obazee!👋</h1>
+            </div>
+
+            <div class="top-bottom">
+              <button class="rates">
+                <img src="./rate.svg" alt="" /> See our rates
+              </button>
+            </div>
+          </div>
+          <div class="top-Middle">
+            <button class="menu"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div class="top-Right">
+            <select id="languageSelect" onchange="changeLanguage()">
+              <option value="en">EN</option>
+              <option value="gb">GB</option>
+              <option value="ca">CA</option>
+              <option value="sw">SW</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="Body2 hidden">
+          <div class="inner">
+            <h2>Finish your account setup(0/2)</h2>
+            <p>
+              Complete your KYC and Identity verification to enable you perform
+              transaction on Grey
+            </p>
+            <div class="process">
+              <div class="pro">
+                <img src="./pro1.svg" alt="" />Account Created
+              </div>
+              <div class="pro">
+                <img src="./pro2.svg" alt="" />Identity verification
+              </div>
+              <div class="pro">
+                <img src="./pro3.svg" alt="" />Document verification
+              </div>
+            </div>
+            <!-- <div class="bg-img">
+                <img src="./bakacc.svg" alt="" />
+              </div> -->
+          </div>
+          <section class="balances">
+            <div class="Balance">Balances</div>
+            <div class="Balance-content">
+              <div class="Balance-cards usdcard">
+                <div class="card-content">
+                  <h4>
+                    <div class="image">
+                      <img src="./USD-round.ff186eaf.svg" alt="" />
+                    </div>
+                    United states Dollar
+                  </h4>
+                  <div class="avail">
+                    <span>AVAILABLE BALANCE</span>
+                    <p>$0.00</p>
+                    <img src="ra.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="Balance-cards gbpcard">
+                <div class="card-content">
+                  <h4>
+                    <div class="image">
+                      <img src="./GBP-round.863f265c.svg" alt="" />
+                    </div>
+                    Great Britain Pounds
+                  </h4>
+                  <div class="avail">
+                    <span>AVAILABLE BALANCE</span>
+                    <p>£0.00</p>
+                    <img src="ra.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="Balance-cards eurocard">
+                <div class="card-content">
+                  <h4>
+                    <div class="image">
+                      <img src="./EUR-round.cd0f43fb.svg" alt="" />
+                    </div>
+                    Euro
+                  </h4>
+                  <div class="avail">
+                    <span>AVAILABLE BALANCE</span>
+                    <p>€0.00</p>
+                    <img src="ra.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="Balance-cards ngncard">
+                <div class="card-content">
+                  <h4>
+                    <div class="image">
+                      <img src="./NGN-round.44ad12d8.svg" alt="" />
+                    </div>
+                    Nigeria Naira
+                  </h4>
+                  <div class="avail">
+                    <span>AVAILABLE BALANCE</span>
+                    <p>₦0.00</p>
+                    <img src="ra.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="actions">
+            <div class="action">Quick action</div>
+            <div class="Action-btn">
+              <a
+                href=""
+                style="background: rgb(236, 235, 255)"
+                class="send_money"
+              >
+                <article>
+                  <h4>Send money to a Grey user</h4>
+                </article>
+                <img src="./GreyTag.c449294c.png" alt="" />
+              </a>
+              <a href="" style="background: #ecebff">
+                <article>
+                  <h4>Create my $GreyTag</h4>
+                </article>
+                <img src="./dollar.0463a196.png" alt="" />
+              </a>
+              <a
+                href=""
+                style="background: rgb(203, 240, 255)"
+                class="create_foreign_acc"
+              >
+                <article>
+                  <h4>Create my foreign account</h4>
+                </article>
+                <img src="./greytag.svg" alt=""
+              /></a>
+              <a
+                href=""
+                style="background: rgb(224, 255, 221)"
+                class="send_cash_btn"
+              >
+                <article>
+                  <h4>Send money from my balance</h4>
+                </article>
+                <img src="./send.147f16af.png" alt="" />
+              </a>
+            </div>
+          </section>
+          <section class="trans-rec">
+            <div class="tran-rec"><p>Recent Transactions</p></div>
+            <div class="rec-form">
+              <img src="./trans-rec.svg" alt="" />
+              You dont have any recent transaction
+            </div>
+          </section>
+
+          <section class="Rates">
+            <div class="Rate">Rate calculator</div>
+            <div class="Rate-form">
+              <span>1 GBP equals</span>
+              <p>2,889.67 TZS</p>
+              <div class="rate-calculator-form">
+                <div class="rate-calculator-form__input">
+                  <label class="from">Currency From</label>
+                  <div class="form-input">
+                    <input type="text" />
+                    <select>
+                      <option value="">GBP</option>
+                      <option value="">USD</option>
+                      <option value="">TZS</option>
+                      <option value="">NGN</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="rate-calculator-form__input">
+                  <label class="to">Currency To</label>
+                  <div class="form-input">
+                    <input type="text" />
+                    <select>
+                      <option value="">GBP</option>
+                      <option value="">USD</option>
+                      <option value="">TZS</option>
+                      <option value="">NGN</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="Body3 hidden">
+          <div class="balance-section">
+            <div class="btn-sec-flex">
+              <div class="btn-sec">
+                <button class="country bal_active bal-title1">
+                  <img src="./USD-round.ff186eaf.svg" alt="" /> USD
+                </button>
+                <button class="country bal-title2">
+                  <img src="./EUR-round.cd0f43fb.svg" alt="" />EUR
+                </button>
+                <button class="country bal-title3">
+                  <img src="GBP-round.863f265c.svg" alt="" />GBP
+                </button>
+                <button class="country bal-title4">
+                  <img src="./NGN-round.44ad12d8.svg" alt="" />NGN
+                </button>
+              </div>
+              <div class="addings">
+                <button class="adding">Add Balance +</button>
+              </div>
+            </div>
+
+            <div class="btn-sec-bal">
+              <div class="avail-pend">
+                <div class="title">
+                  AVAILABLE <span class="chg">USD</span> BALANCE<span
+                    class="avail_pend_quest"
+                    >?</span
+                  >
+                </div>
+                <h3>$0.00</h3>
+              </div>
+              <div class="avail-pend">
+                <div class="title">
+                  PENDING <span class="chg2">USD</span> BALANCE<span
+                    class="avail_pend_quest"
+                    >?</span
+                  >
+                </div>
+                <h3>$0.00</h3>
+              </div>
+            </div>
+            <div class="bal-act-btn-sec">
+              <div class="bal-act-btn deposit_btn">
+                deposit <span class="chg3">USD</span>
+                <img src="./plus-icon.svg" alt="" />
+              </div>
+              <div class="bal-act-btn send_btn">
+                send <span class="chg4">USD</span>
+                <img src="./send icon.svg" alt="" />
+              </div>
+              <div class="bal-act-btn swap_btn">
+                swap <span class="chg5">USD</span>
+                <img src="./transfer icon.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="for-acc">
+            <article>
+              <h4>
+                <img src="./USD-round.ff186eaf.svg" alt="" /> united states
+                dollar
+              </h4>
+              <p>
+                Create a foreign account to receive payment in United States
+                Dollar
+              </p>
+              <button class="rua">Request USD account</button>
+            </article>
+            <img src="./dollar.0463a196.png" alt="" />
+          </div>
+          <section class="trans-rec">
+            <div class="rec-form">
+              <p>USD Balance Activity</p>
+              <img src="./trans-rec.svg" alt="" />
+              You dont have any recent transaction
+            </div>
+          </section>
+        </section>
+
+        <section class="body4 hidden">
+          <div class="FA">
+            <div class="tab">
+              <div class="tab-item">
+                <button class="tab-title active btn1">Foreign Account</button>
+                <button class="tab-title btn2">Reports & Statement</button>
+              </div>
+            </div>
+
+            <div class="tab-list">
+              <div class="request-countries eurobox">
+                <div class="rc">
+                  <h3><img src="./EUR-round.cd0f43fb.svg" alt="" />Euro</h3>
+                  <p>Create a foreign account to receive payment in Euro</p>
+                  <button class="openeuroform">request EUR account</button>
+                </div>
+                <img src="./va-euro.6e742494.png" alt="" class="ebuka" />
+              </div>
+
+              <div class="request-countries gbpbox">
+                <div class="rc">
+                  <h3>
+                    <img src="./GBP-round.863f265c.svg" alt="" />Great Britain
+                    Pounds
+                  </h3>
+                  <p>
+                    Create a foreign account to receive payment in Great Britain
+                    Pounds
+                  </p>
+                  <button>request GBP account</button>
+                </div>
+                <img src="./va-pounds.6bacab35.png" class="ebuka" />
+              </div>
+
+              <div class="request-countries usdbox">
+                <div class="rc">
+                  <h3>
+                    <img src="./USD-round.ff186eaf.svg" alt="" /> United states
+                    Dollar
+                  </h3>
+                  <p>
+                    Create a foreign account to receive payment in United states
+                    Dollar
+                  </p>
+                  <button class="openusdform">request USD account</button>
+                </div>
+                <img src="./va-dollar.5d2252c6 (1).png" class="ebuka" />
+              </div>
+            </div>
+            <div class="euroform hide">
+              <div class="euroformbox">
+                <div class="eurohead">
+                  <div class="bank-box">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <h3>Get <span class="acc_chg"></span> Foreign Account</h3>
+                </div>
+                <div class="euroconfirm">
+                  <h4>Confirm your name</h4>
+                  <p>
+                    Kindly confirm that the details below are correct to enable
+                    you create your foreign
+                    <span class="acc_chg1"></span> account.Please contact
+                    support if it's not.
+                  </p>
+                </div>
+                <div class="euroform1">
+                  First Name <span>Obazee Nelly</span>
+                </div>
+                <div class="euroform2">Last name <span>Osaniga</span></div>
+                <div class="eurosubmit">
+                  Get
+                  <span style="margin: 0px 5px" class="acc_chg2"></span> Foreign
+                  account
+                </div>
+                <div class="euroexit">Cancel and go back</div>
+              </div>
+              <div class="exit_btn">
+                <i class="fa-solid fa-xmark fa-lg"></i>
+              </div>
+            </div>
+            <div class="overlay hide"></div>
+          </div>
+
+          <div class="RA hide">
+            <div class="statment">
+              <div class="icon">
+                <i class="fa-solid fa-file fa-2xl"></i>
+              </div>
+              <h3>Get your statment of Account</h3>
+            </div>
+          </div>
+        </section>
+        <section class="body5 hidden">
+          <div class="invoice-form">
+            <div class="invoice-box">
+              <h2>
+                Create a new invoice
+                <i class="fa-solid fa-arrow-right-long fa-xl"></i>
+              </h2>
+              <img src="./invoice-3D.e37f06a6.png" alt="" />
+            </div>
+
+            <div class="invoice-tab">
+              <div class="invoice-item">
+                <button class="invoice-title active btn3">Invoices</button>
+                <button class="invoice-title btn4">Customers</button>
+              </div>
+              <div class="invoice-btn hide">
+                <div class="invoice-date">
+                  <img src="./calender.svg" width="20px" />
+                  <p>
+                    <span>From</span>
+                    <span>DD/MM/YYYY</span>
+                  </p>
+                  <p>
+                    <span>To</span>
+                    <span>DD/MM/YYYY</span>
+                  </p>
+                  <i class="fa fas-xmark"></i>
+                </div>
+                <button>Download</button>
+              </div>
+            </div>
+            <div class="invoices-rec hide">
+              <div class="rec-form">
+                <img src="./trans-rec.svg" alt="" />
+                You have not created any invoice yet
+              </div>
+            </div>
+          </div>
+
+          <div class="invoice-customers hide">
+            <button class="customers-invoice">
+              Add New <i class="fa fa-square-plus"></i>
+            </button>
+            <div class="invoices-rec">
+              <div class="rec-form">
+                <img src="./trans-rec.svg" alt="" />
+                you have not created any Customers yet.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="body6 hidden">
+          <div class="transction-body">
+            <div class="transaction-main">
+              <div class="transaction-display">
+                <span class="stil-d">Filter:</span>
+                <select name="" id="">
+                  <option value="">Show all Transaction</option>
+                  <option value="">swap</option>
+                  <option value="">Deposit</option>
+                  <option value="">Withdraw</option>
+                </select>
+                <select name="" id="">
+                  <option value="">USD</option>
+                  <option value="">EUR</option>
+                  <option value="">GBP</option>
+                  <option value="">All currencies</option>
+                </select>
+              </div>
+              <div class="transaction-date">
+                <img src="./calender.svg" width="20px" />
+                <p>
+                  <span>From</span>
+                  <span>DD/MM/YYYY</span>
+                </p>
+                <p>
+                  <span>To</span>
+                  <span>DD/MM/YYYY</span>
+                </p>
+                <i class="fa fas-xmark"></i>
+              </div>
+            </div>
+            <div class="transaction-rec">
+              <div class="trans-form">
+                <img src="./trans-rec.svg" alt="" />
+                You have not made any transaction yet.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="body7 hidden">
+          <div class="tab">
+            <div class="benefit-item">
+              <button class="benefit-title active btn5">Recipient</button>
+              <button class="benefit-title btn6">Cards</button>
+            </div>
+            <div class="benefit-main hide">
+              <div class="benefit-buttons">
+                <div class="benefit-date">
+                  <select name="" id="">
+                    <option value="">All channel</option>
+                    <option value="">Mobile app</option>
+                    <option value="">Bank</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="">USD</option>
+                    <option value="">GBP</option>
+                    <option value="">EUR</option>
+                  </select>
+                </div>
+                <div class="benefit-btn">Add recipient</div>
+              </div>
+              <div class="benefit-record">
+                <div class="benefit-form">
+                  <img src="./benefit.svg" alt="" />
+                  You have not added any beneficiaries yet
+                </div>
+              </div>
+            </div>
+            <div class="benefit-cards hide">
+              <div class="benefit-form-card">
+                <img src="./benefit.svg" alt="" />
+                You have not added any cards yet
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="body8 hidden">
+          <div class="ref-inst-box">
+            <div class="ref-main">
+              <h3>Introducing Referral Bonus</h3>
+              <p>
+                Share your referral code and get $5 when whoever you refer signs
+                up and receives over $500 via their foreign account
+              </p>
+              <div class="ref-copy">
+                <p class="fst">Referral code</p>
+                <p class="copy-text" id="myText">XK6URV</p>
+                <button class="copy_btn">
+                  <img src="./copyicon.svg" alt="" />
+                </button>
+                <button class="react_share">
+                  <i class="fa-brands fa-twitter fa-2xl"></i>
+                </button>
+                <button class="react_share">
+                  <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                </button>
+              </div>
+            </div>
+            <img class="tro" src="./Trophy.872b960e.png" alt="" />
+          </div>
+          <div class="invite">
+            <h2>My Referrals</h2>
+            <div class="earnings">
+              <img src="dolcoin.svg" alt="" />
+              <p>Total earnings: $0.00</p>
+            </div>
+          </div>
+          <div class="ref-page">
+            <img src="./ref-img.svg" alt="" />
+          </div>
+        </section>
+        <section class="body9 hidden">
+          <div class="profile-page">
+            <div class="profile-item">
+              <button class="profile-title active btn7">
+                Basic information
+              </button>
+              <button class="profile-title btn8">Notification Settings</button>
+              <button class="profile-title btn9">Security</button>
+              <button class="profile-title btn10">Limits</button>
+            </div>
+            <div class="profile-main hide">
+              <div class="p-info"><h3>PERSONAL INFORMATION</h3></div>
+
+              <div class="p-dic">
+                <div class="p-name">
+                  <div class="name">
+                    <p>Full Name</p>
+                    <span>Your legal full name</span>
+                  </div>
+                  <div class="p-other-name">
+                    <div class="p-others">
+                      <label class="f_name">First Name</label>
+                      <input type="text" value="Obazee" />
+                    </div>
+                    <div class="p-others">
+                      <label class="M_name">Middle Name</label>
+                      <input type="text" value="Nelly" />
+                    </div>
+                    <div class="p-others">
+                      <label class="L_name">Last Name</label>
+                      <input type="text" value="Osaniga" />
+                    </div>
+                  </div>
+                </div>
+                <div class="p-tag">
+                  <div class="p-tag1">
+                    GreyTag
+                    <div class="p-tag1-n">New</div>
+                  </div>
+                  <span>Send and receive money from anyone on Grey</span>
+                  <div class="p-tag2">
+                    Create Grey Tag
+                    <div class="exmark">
+                      <img src="./exmarkicon.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="p-email">
+                  <div class="email">
+                    <p>Email Address</p>
+                    <span>Your registered email address</span>
+                  </div>
+                  <div class="input-email">
+                    <input type="text" value="nellyobazee006@gmail.com" />
+                  </div>
+                </div>
+                <div class="p-phone">
+                  <div class="phone">
+                    <p>Phone Number</p>
+                    <span>Your registered phone number</span>
+                  </div>
+                  <div class="input-email">
+                    <input type="text" value="+2348082287754" />
+                  </div>
+                </div>
+                <button class="save-change">Save Changes</button>
+              </div>
+            </div>
+            <div class="profile_NS hide">
+              <div class="Logins">
+                <div class="login">
+                  <p>Login Alerts</p>
+                  <span
+                    >Notifications on sucessful log ins to your account</span
+                  >
+                </div>
+                <div class="input-logins">
+                  <div class="lo1">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <p>Push Notification</p>
+                  </div>
+                  <div class="lo2">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <p>Email</p>
+                  </div>
+                </div>
+              </div>
+              <div class="Transaction">
+                <div class="transactions">
+                  <p>Transaction Alerts</p>
+                  <span>Notifications on the status of your transactions</span>
+                </div>
+                <div class="input-trans">
+                  <div class="tr1">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <p>Push Notification</p>
+                  </div>
+                  <div class="tr2">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <p>Email</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="prices">
+                <div class="price">
+                  <p>Price Alerts</p>
+                  <span>Notifications on fluctuations in currency rates</span>
+                </div>
+                <div class="input-prices">
+                  <div class="pr">
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                    <p>Push Notification</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="profile_SEC hide">
+              <div class="p-SEC">
+                <div class="p-sec">
+                  <div class="p-sec-head">
+                    GreyTag
+                    <div class="p-sec-n">RECOMMENDED</div>
+                  </div>
+                  <span
+                    >Adds an extra layer of security to your Grey account to
+                    protect you from unauthorized transactions</span
+                  >
+                </div>
+
+                <div class="p-sec2">
+                  <label class="toggle-switch">
+                    <input type="checkbox" id="toggle" />
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="SEC_pas">
+                <div class="sec_pas">
+                  <p>Password</p>
+                  <span>Update existing password</span>
+                </div>
+                <div class="sec_change_pass">
+                  <button href="">Change Password</button>
+                </div>
+              </div>
+              <div class="SEC_Sess">
+                <div class="sec_sess">
+                  <p>Devices & Sessions</p>
+                  <span>See the devices you are currently logged into</span>
+                </div>
+                <div class="sec_login_activity">
+                  <button>See your Login Activity</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile_LT hide">
+              <div class="withdrawal_form">
+                <div class="withdrawal_form_head">
+                  <div class="wft">
+                    <img src="./up_trend.svg" alt="" />Withdrawal Limits
+                  </div>
+                  <div class="withdwal_btn">
+                    <i class="fa-solid fa-caret-up fa-xl"></i>
+                  </div>
+                </div>
+                <div class="withdrawal_form_tail isOpen">
+                  <div class="withdrawal_daily_limit">
+                    <div class="daily_usage">
+                      <p>$5,000</p>
+                      <p>$0.00 used</p>
+                    </div>
+                    <div class="daily-range"></div>
+
+                    <span>Refreshes in 5 hours</span>
+                  </div>
+                  <div class="withdrawal_monthly_limit">
+                    <div class="monthly_usage">
+                      <p>$30,000</p>
+                      <p>$0.00 used</p>
+                    </div>
+                    <div class="monthly-range"></div>
+                    <span>Refreshes in 1 year</span>
+                  </div>
+                </div>
+              </div>
+              <div class="deposit_form">
+                <div class="deposit_form_head">
+                  <div class="dft">
+                    <img src="./down_trend.svg" alt="" />Deposit Limits
+                  </div>
+                  <div class="deposit_btn">
+                    <i class="fa-solid fa-caret-up fa-xl"></i>
+                  </div>
+                </div>
+
+                <div class="deposit_form_tail isOpen">
+                  <div class="foreign_acc">
+                    <h3>Foreign account deposit</h3>
+                    <p>
+                      <img src="./blue_exc_icon.svg" alt="" />Please note that
+                      there are no limits for foreign account deposits. However,
+                      deposits higher than $10,000 will be subject to
+                      verification
+                    </p>
+                  </div>
+                  <hr />
+                  <h3>Balance deposit</h3>
+                  <div class="deposit_sec">
+                    <div class="deposit_daily_limit">
+                      <div class="daily_usage">
+                        <p>$5,000</p>
+                        <p>$0.00 used</p>
+                      </div>
+                      <div class="daily-range"></div>
+
+                      <span>Refreshes in 5 hours</span>
+                    </div>
+                    <div class="deposit_monthly_limit">
+                      <div class="monthly_usage">
+                        <p>$30,000</p>
+                        <p>$0.00 used</p>
+                      </div>
+                      <div class="monthly-range"></div>
+                      <span>Refreshes in 1 year</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="body10 hidden">
+          <div class="virtual-head">
+            <h1>Grey Virtual Card</h1>
+            <p>
+              Instantly create a prepaid virtual card to make online payments
+              easily on all your favorite sites.
+            </p>
+          </div>
+          <div class="virtual-card-box">
+            <div class="virtal-img">
+              <img src="./virtualcard.jpg" alt="" />
+            </div>
+            <div class="virtual-btn">
+              Create virtual card <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </section>
+
+        <form action="" class="p2p hide">
+          <div class="send_p2p">
+            <div class="top_p2p">
+              <div class="exit_main_p2p">
+                <div class="go_back_left">
+                  <i class="fa-solid fa-arrow-left"></i> go back
+                </div>
+                <div class="Exit_p2p_right">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+              <div class="send_p2p_icon">
+                <div class="icon_p2p"><i class="fa-solid fa-at"></i></div>
+                Send to grey tag
+              </div>
+            </div>
+            <div class="middle_p2p">
+              <div class="middle">
+                <div class="inputs">
+                  <label for="">Balance to send from</label>
+                  <div class="input">
+                    <select
+                      name=""
+                      id=""
+                      aria-placeholder="Select wallet"
+                    ></select>
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Recipient GreyTag(Username) </label>
+                  <div class="input">
+                    <input type="text" placeholder="@ Enter GreyTag" />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Recipient Name</label>
+                  <div class="input"><input type="text" /></div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Recipient Balance</label>
+                  <div class="input">
+                    <input type="text" placeholder="Select wallet" />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Amount to withdraw</label>
+                  <div class="input">
+                    <input type="text" placeholder="0.00" />
+                  </div>
+                </div>
+                <div class="inputs">
+                  <label for="">Amount user will receive</label>
+                  <div class="input">
+                    <input type="text" placeholder="0.00" />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Description (Optional)</label>
+                  <div class="input">
+                    <input type="text" placeholder="Enter your text here" />
+                  </div>
+                </div>
+                <div class="inputs">
+                  <input type="checkbox" name="" id="" />
+                  <p>I confirm to be debited <span>₦0</span> to my balance</p>
+                </div>
+              </div>
+              <div class="bottom">
+                <button class="back_btn">Cancel</button>
+                <button class="for_btn">Proceed</button>
+              </div>
+            </div>
+          </div>
+          <div class="exit_btn">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlay hide"></div>
+        </form>
+
+        <div class="send_cash_box hide">
+          <div class="send_cash">
+            <div class="exit_main_cash">
+              <div class="go_back_left">
+                <div class="go_icon"><img src="./return.svg" alt="" /></div>
+                Send Funds
+              </div>
+              <div class="Exit_cash_right">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="sends_funds_one display_send_p2p">
+              <h4>Send using GreyTag</h4>
+              <p>
+                Send funds instantly to your friends or collegues using their
+                GreyTag
+              </p>
+            </div>
+            <div class="sends_funds_two">
+              <h4>Send to saved beneficiary</h4>
+              <p>
+                Choose from one of your saved beeneficiaries to make a
+                withdrawal
+              </p>
+            </div>
+            <div class="sends_funds_three">
+              <h4>Send to a new recipient</h4>
+              <p>
+                Enter details of an account ou havent previously saved to make a
+                withdrawal
+              </p>
+            </div>
+          </div>
+          <div class="exit_btn_cash">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlay hide"></div>
+        </div>
+
+        <div class="save_beneficiaries hide">
+          <div class="saved_bene_box">
+            <div class="exit_main_bene">
+              <div class="go_back_left_bene">
+                <i class="fa-solid fa-arrow-left"></i> go back
+              </div>
+              <div class="Exit_bene_right">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <div class="send_bene_icon">
+              <div class="go_icon">
+                <i class="fa-solid fa-user" style="color: #3d87f5"></i>
+              </div>
+              <p>Send to grey tag</p>
+            </div>
+            <div class="bene_inputs">
+              <label for="">Select balance to top-up</label>
+              <div class="bene_input">
+                <select name="" id="" aria-placeholder="Select wallet"></select>
+              </div>
+            </div>
+            <div class="bene_inputs">
+              <label for="">Select saved recipient</label>
+              <div class="bene_input">
+                <select name="" id="" aria-placeholder="Select wallet"></select>
+              </div>
+            </div>
+          </div>
+          <div class="exit_btn_bene">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlay hide"></div>
+        </div>
+
+        <form action="" class="New_recipient hide">
+          <div class="Recipient_form">
+            <div class="top_recipient">
+              <div class="exit_main_recipient">
+                <div class="go_back_left_recipient">
+                  <i class="fa-solid fa-arrow-left"></i> go back
+                </div>
+                <div class="Exit_recipient_right">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+              <div class="send_recipient_icon">
+                <div class="icon_recipient">
+                  <i class="fa-solid fa-at"></i>
+                </div>
+                Send to grey tag
+              </div>
+            </div>
+            <div class="middle_recipient">
+              <div class="middle">
+                <div class="inputs">
+                  <label for="">Balance to send from</label>
+                  <div class="input">
+                    <select
+                      name=""
+                      id=""
+                      aria-placeholder="Select wallet"
+                    ></select>
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Amount to withdraw </label>
+                  <div class="input">
+                    <input type="text" placeholder="0.00" />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Amount to receive</label>
+                  <div class="input">
+                    <input type="text" placeholder="0.00" disabled />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Recipient Type</label>
+                  <div class="input">
+                    <select name="" id=""></select>
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">First Name</label>
+                  <div class="input">
+                    <input type="text" placeholder="Enter your text here" />
+                  </div>
+                </div>
+                <div class="inputs">
+                  <label for="">Last Name</label>
+                  <div class="input">
+                    <input type="text" placeholder="Enter your text here" />
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <label for="">Description (Optional)</label>
+                  <div class="input">
+                    <input type="text" placeholder="Enter your text here" />
+                  </div>
+                </div>
+                <div class="inputs">
+                  <input type="checkbox" name="" id="" />
+                  <p>Save as new recipient</p>
+                </div>
+                <div class="inputs">
+                  <input type="checkbox" name="" id="" />
+                  <p>I confirm to be debited <span>₦0</span> to my balance</p>
+                </div>
+              </div>
+              <div class="bottom_recipient">
+                <button class="back_btn_recipient">Cancel</button>
+                <button class="for_btn_recipient">Proceed</button>
+              </div>
+            </div>
+          </div>
+          <div class="exit_btn_recipient">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlay hide"></div>
+        </form>
+        <!-- Deposit section -->
+        <form action="" class="Deposit_top_up_funds hide">
+          <div class="top_up_funds_box">
+           
+              <div class="exit_main_top_up">
+                <div class="go_back_left_top_up">
+                  <div class="go_icon_top_up">
+                    <img src="./return.svg" alt="" />
+                  </div>
+                  <p>Top-up Funds</p>
+                </div>
+                <div class="Exit_top_up_right">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              </div>
+          
+
+            <div class="middle_top_up">
+              <div class="inputs">
+                <label for="">Select balance to top-up</label>
+                <div class="input">
+                  <select
+                    name=""
+                    id=""
+                    aria-placeholder="Select wallet"
+                  ></select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">payment Method</label>
+                <div class="input">
+                  <select
+                    name=""
+                    id=""
+                    aria-placeholder="Select wallet"
+                  ></select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Amount to top-up</label>
+                <div class="input">
+                  <input type="text" placeholder="$ 0.00" />
+                </div>
+              </div>
+
+              <div class="inputs">
+                <label for="">Amount you'll receive</label>
+                <div class="input">
+                  <input type="text" placeholder="$ 0.00" disabled />
+                </div>
+              </div>
+              <div class="inputs">
+                <input type="checkbox" name="" id="" />
+                <p>
+                  I confirm to be debited <span>$0</span> to my balance top-up
+                </p>
+              </div>
+            </div>
+
+            <div class="bottom_top_up">
+              <button class="back_btn_top_up">Cancel</button>
+              <button class="for_btn_top_up">Proceed</button>
+            </div>
+          </div>
+          <div class="exit_btn_top_up">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlay hide"></div>
+        </form>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

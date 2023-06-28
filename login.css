@@ -1,0 +1,342 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./backgroungimg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+.page .trans-img {
+  background: transparent;
+}
+.page .for-img {
+  padding: 30px;
+}
+.page .loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(229, 233, 241);
+  height: 400px;
+  width: 350px;
+  background-color: white;
+  border-radius: 8px;
+}
+.loginform .login-text {
+  margin: 15px;
+  align-self: flex-start;
+}
+.loginform .login-text h3 {
+  font-family: "Aeonik", sans-serif;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 21px;
+  color: #333333;
+  font-weight: bold;
+}
+/* hr{
+        background-color: black;
+        align-self: flex-start;
+        width: 300px;
+} */
+.loginform .email {
+  align-self: flex-start;
+  padding-left: 20px;
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: #444a58;
+}
+.loginform input[type="text"] {
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 80px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.loginform .password {
+  font-family: "Aeonik";
+  align-self: flex-start;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #444a58;
+}
+.loginform input[type="password"] {
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 80px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgb(34, 34, 34) !important;
+}
+.reset {
+  align-self: flex-start;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  color: rgb(61, 135, 245);
+  font-weight: 400;
+  text-decoration: underline;
+}
+.login-btn {
+  width: 300px;
+  height: 50px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+}
+.question {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question .new-user {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.question .create-acc {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang .language {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.lang .choose {
+  margin: 2px;
+  border-radius: 9px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #f0f6fe;
+}
+@media only screen and (min-width: 767px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .page .trans-img {
+    display: none;
+    background: transparent;
+  }
+  .page .for-img {
+    display: none;
+  }
+  .page .loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(229, 233, 241);
+    height: 400px;
+    width: 450px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .loginform .login-text {
+    margin: 17px;
+    align-self: flex-start;
+  }
+  .loginform .login-text h3 {
+    font-family: "Aeonik", sans-serif;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 23px;
+    color: #333333;
+    font-weight: bold;
+  }
+  /* hr{
+                background-color: black;
+                align-self: flex-start;
+                width: 300px;
+        } */
+  .loginform .email {
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: "Aeonik";
+    color: #444a58;
+  }
+  .loginform input[type="text"] {
+    font-family: "Aeonik";
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 233, 241);
+    box-sizing: border-box;
+    padding: 12px 120px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .loginform .password {
+    font-family: "Aeonik";
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444a58;
+  }
+  .loginform input[type="password"] {
+    font-family: "Aeonik";
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 233, 241);
+    box-sizing: border-box;
+    padding: 12px 120px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: rgb(34, 34, 34) !important;
+  }
+  .reset {
+    align-self: flex-start;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    color: rgb(61, 135, 245);
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  .login-btn {
+    width: 370px;
+    height: 50px;
+    background: rgb(61, 135, 245);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  .question {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .question .new-user {
+    font-size: 14px;
+    font-family: "Aeonik";
+    font-weight: bold;
+  }
+  .question .create-acc {
+    font-size: 14px;
+    font-family: "Aeonik";
+    color: rgb(61, 135, 245);
+    font-weight: bold;
+  }
+  .lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lang .language {
+    font-size: 14px;
+    font-family: "Aeonik";
+    font-weight: bold;
+  }
+  .lang .choose {
+    margin: 2px;
+    border-radius: 9px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #f0f6fe;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page .loginform {
+    border: 1px solid rgb(229, 233, 241);
+    height: 400px;
+    width: 470px;
+  }
+  .loginform .login-text {
+    margin: 17px;
+    align-self: flex-start;
+  }
+  .loginform .login-text h3 {
+    font-family: "Aeonik", sans-serif;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #333333;
+    font-weight: bold;
+  }
+  /* hr{
+                background-color: black;
+                align-self: flex-start;
+                width: 300px;
+        } */
+  .loginform .email {
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 14px;
+    font-family: "Aeonik";
+    color: #444a58;
+  }
+  .loginform input[type="text"] {
+    font-family: "Aeonik";
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 233, 241);
+    box-sizing: border-box;
+    padding: 12px 130px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .loginform .password {
+    font-family: "Aeonik";
+    align-self: flex-start;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444a58;
+  }
+  .loginform input[type="password"] {
+    padding: 12px 130px;
+  }
+  .login-btn {
+    width: 375px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./backgroungimg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Non-reg-form {
+  display: none;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+.page .trans-img {
+  background: transparent;
+}
+.page .for-img {
+  padding: 30px;
+}
+.page .verifyform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(229, 233, 241);
+  height: 450px;
+  width: 390px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.verifyform .verify-text {
+  margin: 15px;
+  align-self: flex-start;
+}
+.verifyform .verify-text h3 {
+  font-family: "Aeonik", sans-serif;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 21px;
+  color: #333333;
+  font-weight: bold;
+}
+hr {
+  background-color: black;
+  align-self: flex-start;
+  width: 350px;
+}
+.paragraph {
+  justify-self: center;
+  align-self: center;
+  padding: 15px 5px 60px 5px;
+}
+.paragraph p {
+  font-size: 16px;
+  font-family: "Aeonik";
+  padding-left: 7px;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 40px;
+}
+.box1 {
+  padding: 15px;
+}
+.box2 {
+  padding: 15px;
+}
+
+.verifyform input[type="text"] {
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  width: 45px;
+  height: 47px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.verify-btn {
+  width: 300px;
+  height: 50px;
+  background: rgb(61, 135, 245);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.verify-btn a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.RC{
+        padding: 10px;
+       }
+       .RC i{
+             padding-right: 7px;
+       }
+       .RC{
+             font-size: 17px;
+             font-family: 'Aeonik';
+             font-weight: bold;
+       }
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.lang .language {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.lang .choose {
+  margin: 2px;
+  border-radius: 9px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #f0f6fe;
+}
+@media only screen and (min-width: 767px) {
+  .Non-reg-form {
+    display: none;
+  }
+  .page .for-img {
+  display: none;
+  }
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .page .trans-img {
+    background: transparent;
+  }
+  .page .for-img {
+    padding: 30px;
+  }
+  .page .verifyform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(229, 233, 241);
+    height: 500px;
+    width: 410px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  .verifyform .verify-text {
+    margin: 16px;
+    align-self: flex-start;
+  }
+  .verifyform .verify-text h3 {
+    font-family: "Aeonik", sans-serif;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: #333333;
+    font-weight: bold;
+  }
+  hr {
+    background-color: black;
+    align-self: flex-start;
+    width: 370px;
+  }
+  .paragraph {
+    justify-self: center;
+    align-self: center;
+    padding: 15px 5px 60px 5px;
+  }
+  .paragraph p {
+    font-size: 17px;
+    font-family: "Aeonik";
+    padding-left: 7px;
+  }
+  .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+  }
+  .box1 {
+    padding: 15px;
+  }
+  .box2 {
+    padding: 15px;
+  }
+
+  .verifyform input[type="text"] {
+    width: 50px;
+
+  }
+  .verify-btn {
+    width: 320px;
+  }
+  .RC{
+   padding: 40px;
+  }
+  .RC i{
+        padding-right: 7px;
+  }
+  .RC{
+        font-size: 17px;
+        font-family: 'Aeonik';
+        font-weight: bold;
+  }
+  .lang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .lang .language {
+    font-size: 16px;
+    font-family: "Aeonik";
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  .lang .choose {
+    margin: 2px;
+    border-radius: 9px;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #f0f6fe;
+  }
+}
+@media only screen and (min-width: 1200px) {
+        .Register-page {
+          display: flex;
+          justify-content: space-around;
+          align-items: flex-start;
+          margin: 0;
+        }
+        .page .for-img {
+          display: none;
+          }
+        .Non-reg-form {
+          position: fixed;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          width: 45%;
+          height: 100vh;
+          background-image: url("./backgroungimg.svg");
+        }
+        .Non-reg-form .carousel {
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+        }
+        .Non-reg-form .img-part {
+          padding: 30px 48px 0px 30px;
+        }
+        .Non-reg-form .img-part img {
+          width: 170px;
+        }
+        .Non-reg-form .container1 {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 20px;
+        }
+        .Non-reg-form .container1 .swiper-container-1 .head h3 {
+          font-size: 25px;
+          font-family: "Aeonik", sans-serif;
+          font-weight: bold;
+          padding: 10px;
+          margin-bottom: 10px;
+          color: #333333;
+        }
+        .Non-reg-form .container1 .swiper-container-1 .head p {
+          font-size: 15px;
+          font-family: "Aeonik";
+          font-weight: lighter;
+          padding: 5px 10px 0px 10px;
+          color: #808080;
+        }
+        .Non-reg-form .container2 {
+          display: flex;
+          padding-left: 100px;
+          justify-content: space-around;
+          align-items: flex-end;
+        }
+        .Non-reg-form .container2 .swiper-container-2 .swiper-slide {
+          align-self: flex-end;
+        }
+        .Non-reg-form .container2 .swiper-container-2 img {
+          width: 340px;
+        }
+        .Non-reg-form .container1 .swiper {
+          width: 100%;
+          height: 150px;
+        }
+        .Non-reg-form .container2 .swiper {
+          width: 100%;
+          height: 350px;
+          margin-top: 12px;
+        }
+        .Non-reg-form .container1 .swiper-pagination {
+          position: absolute;
+          left: -190px;
+          bottom: -3px;
+        }
+        .last-line {
+          display: block;
+          padding: 10px;
+        }
+        .line {
+          display: flex;
+          justify-content: space-around;
+          font-size: 14px;
+          font-family: "Aeonik";
+          color: #808080;
+        }
+        .page {
+          position: relative;
+          left: 290px;
+          width: 50%;
+        }
+      }
+      

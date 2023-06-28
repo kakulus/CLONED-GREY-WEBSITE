@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.body5 {
+  position: relative;
+  top: 80px;
+  border-radius: 7px;
+}
+.invoice-form {
+  padding: 20px;
+}
+.invoice-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  border: 1px solid rgb(229, 233, 241);
+  overflow: hidden;
+  background: linear-gradient(
+      90deg,
+      rgba(37, 177, 133, 0.1) 0%,
+      rgba(61, 135, 245, 0.1) 26%,
+      rgb(255, 255, 255) 79%
+    )
+    right center / contain no-repeat rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.invoice-box h2 {
+  font-size: 20px;
+  font-family: "Aeonik", sans-serif;
+  padding: 10px;
+  font-weight: bold;
+}
+.invoice-box img {
+  display: none;
+}
+
+.invoice-item {
+  flex: 1 1 0%;
+  min-width: max-content;
+  z-index: 9;
+}
+.invoice-title {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #808080;
+  padding: 10px 17px 14px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  background: transparent;
+}
+.invoice-title.active {
+  font-size: 14px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: #3d87f5;
+  margin-bottom: 0px;
+}
+.invoice-title.active::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: rgb(61, 135, 245);
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9;
+  border-radius: 4px;
+}
+.invoice-date {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 0px;
+  border-radius: 8px;
+}
+.invoice-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.invoice-btn button {
+  width: 100px;
+  height: 40px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.invoices-rec {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+}
+.invoices-rec .rec-form {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: lighter;
+  color: #333333;
+}
+.invoice-customers {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.invoice-customers button {
+  width: 100px;
+  height: 40px;
+  background: rgb(61, 135, 245);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+  align-self: center;
+}
+@media only screen and (min-width: 650px) {
+  .invoice-box img {
+    display: block;
+    position: relative;
+    left: 20px;
+  }
+  .invoice-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .invoice-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .body5 {
+    position: relative;
+    top: 70px;
+    border-radius: 7px;
+  }
+  .invoice-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .invoice-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .invoice-btn button {
+    margin-left: 30px;
+  }
+  .invoice-date {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .body5 {
+    position: relative;
+    top: 120px;
+    border-radius: 7px;
+  }
+  .invoice-date {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .hide {
+    display: none;
+  }
+}

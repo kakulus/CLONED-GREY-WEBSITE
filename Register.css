@@ -1,0 +1,461 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: lighter;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./backgroungimg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Non-reg-form {
+  display: none;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+.Register-page .Reg-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(229, 233, 241);
+  height: 970px;
+  width: 360px;
+  background-color: white;
+  border-radius: 8px;
+}
+.Register-page .Reg-text {
+  margin: 15px;
+  align-self: flex-start;
+}
+.Register-page .Reg-text h3 {
+  font-family: "Aeonik", sans-serif;
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 21px;
+  color: #333333;
+  font-weight: bold;
+}
+hr {
+  background-color: black;
+  align-self: center;
+  width: 340px;
+  height: 2px;
+  margin: 5px 3px;
+}
+.Reg-form .F-name,
+.M-name,
+.L-name,
+.Email,
+.p-No,
+.Ref,
+.password {
+  align-self: flex-start;
+  padding-left: 25px;
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: #444a58;
+}
+.Reg-form input[type="text"] {
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 80px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.Reg-form input[type="password"] {
+  font-family: "Aeonik";
+  font-weight: bold;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 233, 241);
+  box-sizing: border-box;
+  padding: 12px 80px;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  color: rgb(34, 34, 34) !important;
+}
+.rule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.rule p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 7px;
+}
+.rule .rul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.rules {
+  font-size: 17px;
+  border: 2px black;
+  border-style: dotted;
+  border-radius: 100px;
+  margin: 5px 3px;
+  padding: 6px;
+}
+.check {
+  margin: 12px 0px;
+}
+.check .agree {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.check .agree .tems,
+.agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.Reg-btn {
+  width: 340px;
+  height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  background: rgb(242, 242, 242);
+  cursor: not-allowed;
+}
+.Reg-btn  a{
+  color: rgb(191, 191, 191);
+  text-decoration: none;
+}
+.quest {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: url("./backgroungimg.svg");
+}
+.quest .tems {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.quest .agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang .language {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.lang .choose {
+  margin: 2px;
+  border-radius: 9px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #f0f6fe;
+}
+@media only screen and (min-width: 767px) {
+  .Non-reg-form {
+    display: none;
+  }
+  .page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .page .Reg-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(229, 233, 241);
+    height: 750px;
+    width: 470px;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .Reg-form .Reg-text {
+    margin: 15px;
+    align-self: flex-start;
+  }
+  .Reg-form .Reg-text h3 {
+    font-family: "Aeonik", sans-serif;
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 25px;
+    color: #333333;
+    font-weight: bold;
+  }
+  hr {
+    background-color: black;
+    align-self: center;
+    width: 450px;
+    height: 2px;
+    margin: 5px 3px;
+  }
+  .Reg-form .column1,
+  .column2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+  }
+  .Reg-form .column1 input[type="text"] {
+    padding: 12px 25px;
+    margin-left: 10px;
+  }
+  .Reg-form .column2 input[type="text"] {
+    padding: 12px 25px;
+    margin-left: 10px;
+  }
+
+  .Reg-form .F-name,
+  .M-name,
+  .L-name,
+  .Email,
+  .p-No,
+  .Ref,
+  .password {
+    align-self: flex-start;
+    padding-left: 15px;
+    font-size: 15px;
+    font-family: "Aeonik";
+    color: #444a58;
+  }
+  .Reg-form input[type="text"] {
+    font-family: "Aeonik";
+    font-weight: bold;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 233, 241);
+    box-sizing: border-box;
+    padding: 12px 140px;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+.Reg-form input[type="password"] {
+  padding: 12px 140px;
+  margin-left: 10px;
+
+}
+.rule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.rule p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 7px;
+}
+.rule .rul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.rules {
+  font-size: 17px;
+  border: 2px black;
+  border-style: dotted;
+  border-radius: 100px;
+  margin: 5px 3px;
+  padding: 6px;
+}
+.check {
+  margin: 12px 0px;
+}
+.check .agree {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.check .agree .tems,
+.agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.Reg-btn {
+  width: 340px;
+  height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  background: rgb(242, 242, 242);
+  color: rgb(191, 191, 191);
+  cursor: not-allowed;
+}
+.quest {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: url("./backgroungimg.svg");
+}
+.quest .tems {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.quest .agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang .language {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.lang .choose {
+  margin: 2px;
+  border-radius: 9px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #f0f6fe;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+  .Register-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .Non-reg-form {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100vh;
+    background-image: url("./backgroungimg.svg");
+  }
+  .Non-reg-form .carousel {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  .Non-reg-form .img-part {
+    padding: 30px 48px 0px 30px;
+  }
+  .Non-reg-form .img-part img {
+    width: 170px;
+  }
+  .Non-reg-form .container1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  .Non-reg-form .container1 .swiper-container-1 .head h3 {
+    font-size: 25px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  .Non-reg-form .container1 .swiper-container-1 .head p {
+    font-size: 15px;
+    font-family: "Aeonik";
+    font-weight: lighter;
+    padding: 5px 10px 0px 10px;
+    color: #808080;
+  }
+  .Non-reg-form .container2 {
+    display: flex;
+    padding-left: 100px;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .Non-reg-form .container2 .swiper-container-2 .swiper-slide {
+    align-self: flex-end;
+  }
+  .Non-reg-form .container2 .swiper-container-2 img {
+    width: 340px;
+  }
+  .Non-reg-form .container1 .swiper {
+    width: 100%;
+    height: 150px;
+  }
+  .Non-reg-form .container2 .swiper {
+    width: 100%;
+    height: 350px;
+    margin-top: 12px;
+  }
+  .Non-reg-form .container1 .swiper-pagination {
+    position: absolute;
+    left: -190px;
+    bottom: -3px;
+  }
+  .last-line {
+    display: block;
+    padding: 10px;
+  }
+  .line {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    font-family: "Aeonik";
+    color: #808080;
+  }
+  .page {
+    position: relative;
+    left: 290px;
+    width: 50%;
+  }
+}

@@ -1,0 +1,661 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.hide{
+  display: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7f7f7;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 170px;
+  z-index: 99;
+}
+.top-Left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.top-Left .top-left {
+  margin-bottom: 10px;
+}
+.top-Left h1 {
+  font-size: 30px;
+  font-family: "Aeonik";
+  color: #27303d;
+  display: bold;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.top-Left h1 span {
+  font-size: 30px;
+  font-family: "Aeonik";
+  font-weight: light;
+  color: #666666;
+  display: block;
+}
+.top-Left .rates {
+  padding: 12px;
+  font-size: 15px;
+  color: #3d87f5;
+  font-family: "Aeonik";
+  font-weight: 700;
+  border: 1px solid rgb(231, 240, 254) !important;
+  background-color: white;
+  border-radius: 100px;
+}
+.top .top-Middle {
+  margin-left: 0px;
+  padding-left: 20px;
+}
+.top .menu {
+  border: none;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px 0px;
+  display: block;
+  margin-left: 1rem;
+  font-size: 16px;
+}
+.top select {
+  padding: 3px 7px;
+  border: none;
+}
+.hide-menu{
+  display: none;
+}
+.fixed-dropdown{
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 30%;
+  height: 100vh;
+}
+
+.dropdownmenu{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px 0px 16px;
+  background-color: white;
+  background-image: url("./backgroungimg.svg");
+}
+.dropdownmenu .nav-img {
+  align-self: center;
+  margin-top: 25px;
+}
+.dropdownmenu .nav-bar a img {
+  fill: rgb(191, 191, 191);
+  margin-right: 20px;
+}
+
+.dropdownmenu .nav-bar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 50px 10px;
+  align-items: center;
+  height: 470px;
+  margin-top: 30px;
+  scroll-behavior: smooth;
+}
+.dropdownmenu .nav-bar a {
+  text-align: center;
+  color: rgb(101, 104, 107);
+  font-weight: 400;
+  font-family: "Aeonik" sans-serif;
+  font-size: 0.875rem;
+  padding: 10px 14px;
+  width: 100%;
+  height: 55px;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.dropdownmenu .mini-nav a {
+  text-align: center;
+  color: rgb(101, 104, 107);
+  font-weight: 400;
+  font-family: "Aeonik" sans-serif;
+  font-size: 0.875rem;
+  padding: 10px 14px;
+  width: 100%;
+  height: 55px;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.dropdownmenu .nav-bar a.act_ive {
+  background: rgb(231, 240, 254);
+  color: rgb(26, 26, 26);
+  font-weight: 600;
+  border-radius: 5px;
+}
+.dropdownmenu .nav-foot {
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: "Aeonik", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+.dropdownmenu .nav-foot span {
+  background-color: rgb(46, 130, 158);
+  color: white;
+  font-size: 20px;
+  border-radius: 100px;
+  padding: 5px;
+}
+.nav-bar a.act_ive {
+  background: rgb(231, 240, 254);
+  color: rgb(26, 26, 26);
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+
+
+
+.Deposit_top_up_funds {
+  align-self: center;
+  display: flex;
+  position: fixed;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  z-index: 300;
+}
+.top_up_funds_box {
+  display: flex;
+  height: 100%;
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  border-radius: 15px 15px 0px 0px;
+  transition: all 300ms ease;
+  gap: 20px;
+  z-index: 300;
+}
+.go_icon_top_up{
+  background-color: rgb(240, 246, 254);
+  padding: 10px 10px;
+  width: 35px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.go_back_left_top_up{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.go_back_left_top_up p{
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.middle_top_up {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 40px 10px;
+  align-items: center;
+  height: 550px;
+  scroll-behavior: smooth;
+}
+
+.top_up_funds_box .top_up .exit_main_top_up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.exit_main_top_up .go_back_left_top_up {
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+}
+.exit_main_top_up .Exit_top_up_right {
+  border: none;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px -5px;
+  z-index: 2147483647;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.top_up_funds_box .middle_top_up {
+  align-self: center;
+  display: flex;
+  padding: 0px 20px 32px;
+
+  flex-direction: column;
+}
+.middle_top_up .inputs {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.middle_top_up .inputs label {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #333333;
+  font-weight: 600;
+  /* position: relative;
+  left: 20px; */
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+.middle_top_up .inputs select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 12px 110px;
+  font-size: 0.875rem;
+  background-color: rgb(255, 255, 255) !important;
+}
+.middle_top_up .input {
+  font-family: Aeonik;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+}
+.middle_top_up .inputs input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 12px;
+  font-size: 0.875rem;
+  background-color: rgb(255, 255, 255) !important;
+}
+.middle_top_up .inputs:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.middle input[type="checkbox"] {
+  width: 25px;
+  border-radius: 20px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 8px;
+}
+.middle_top_up .inputs:last-child p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  color: #333333;
+  font-size: 15px;
+}
+.top_up_funds_box .bottom_top_up {
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  padding: 10px 20px 30px 10px;
+  gap: 10px;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  height: 20px;
+}
+.bottom_top_up .back_btn_top_up {
+  width: 70px;
+  height: 35px;
+  border: 1px solid #3d87f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #3d87f5;
+  background-color: #fff;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+}
+.for_btn_top_up {
+  width: 70px;
+  height: 35px;
+  color: white;
+  background-color: #3d87f5;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+.exit_btn_top_up {
+  display: none;
+  z-index: 300;
+}
+@media only screen and (min-width: 750px) {
+  .fixed-dropdown{
+    display: none;
+  }
+  .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f7f7f7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 130px;
+    z-index: 299;
+  }
+  .top-Left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .top-Left .top-left {
+    margin-bottom: 10px;
+  }
+  .top-Left h1 {
+    font-size: 30px;
+    font-family: "Aeonik";
+    color: #27303d;
+    margin-right: 20px;
+    display: inline;
+  }
+
+  .top-Left h1 span {
+    font-size: 30px;
+    font-family: "Aeonik";
+    font-family: light;
+    color: #666666;
+    display: inline;
+  }
+
+  .top .top-Middle {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .top .menu {
+    border: none;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px 0px;
+    display: block;
+    font-size: 16px;
+  }
+  .top select {
+    padding: 3px 7px;
+    border: none;
+  }
+
+  .Deposit_top_up_funds {
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    right: 0;
+    z-index: 300;
+  }
+  .top_up_funds_box {
+    width: 350px;
+    border-radius: 10px;
+    height:500px;
+  }
+  .top_up_funds_box .Exit_top_up_right {
+    display: none;
+  }
+  .exit_btn_top_up {
+    display: block;
+    height: 25px;
+    padding: 4px 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin-left: 10px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    z-index: 300;
+  }
+  .Deposit_top_up_funds .overlay {
+    background: rgba(46, 57, 83, 0.79);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 250;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+}
+  
+@media only screen and (min-width:1200px) {
+  .dashboard {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .Nav {
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    background-image: url("./backgroungimg.svg");
+    padding: 0px 15px 0px 16px;
+    z-index: 100;
+  }
+  .Nav .nav-img {
+    align-self: center;
+    margin-top: 25px;
+  }
+  .Nav .nav-bar a img {
+    fill: rgb(191, 191, 191);
+    margin-right: 20px;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 50px 10px;
+    align-items: center;
+    height: 470px;
+    margin-top: 30px;
+    scroll-behavior: smooth;
+  }
+  .nav-bar a{
+    text-align: center;
+    color: rgb(101, 104, 107);
+    font-weight: 400;
+    font-family: "Aeonik" sans-serif;
+    font-size: 0.875rem;
+    padding: 10px 14px;
+    width: 100%;
+    height: 55px;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .mini-nav a{
+    text-align: center;
+    color: rgb(101, 104, 107);
+    font-weight: 400;
+    font-family: "Aeonik" sans-serif;
+    font-size: 0.875rem;
+    padding: 10px 14px;
+    width: 100%;
+    height: 55px;
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  .nav-bar button.act_ive {
+    background: rgb(231, 240, 254);
+    color: rgb(26, 26, 26);
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  .nav-foot {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-family: "Aeonik", sans-serif;
+    font-weight: bold;
+    color: black;
+  }
+  .nav-foot span {
+    background-color: rgb(46, 130, 158);
+    color: white;
+    font-size: 20px;
+
+    border-radius: 100px;
+    padding: 5px;
+  }
+  .Body {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  .top-Middle {
+    display: none;
+  }
+  .top {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 130px;
+    z-index: 299;
+  }
+  .top-Left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 40px;
+  }
+  .top-Left .top-left {
+    margin-bottom: 10px;
+    margin-right: 40px;
+    position: relative;
+    right: 30%;
+  }
+  .top-left h1 {
+    font-size: 30px;
+    font-family: "Aeonik";
+    color: #27303d;
+    margin-right: 20px;
+    display: inline;
+  }
+
+  .top-left h1 span {
+    font-size: 30px;
+    font-family: "Aeonik";
+    font-family: light;
+    color: #666666;
+    display: inline;
+  }
+  .top-Right {
+    display: block;
+  position: relative;
+  right: 10%;
+  }
+  .top select {
+    padding: 3px 7px;
+    border: none;
+    position: relative;
+    right: 50%;
+  }
+  .Deposit_top_up_funds {
+    position: fixed;
+    bottom: 5%;
+    left: 45%;
+    right: 0;
+    z-index: 300;
+  }
+ 
+}
+

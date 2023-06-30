@@ -348,37 +348,37 @@ sendGreyBtn.addEventListener("click", (event) => {
 });
 overlayP2p.addEventListener("click", () => {
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 
 GobackBtnP2p.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 exitP2p.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 exitP2pDesktop.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 cancelP2pBtn.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 euroExitCancel.addEventListener("click", () => {
   hideElement(sendGreyBox);
-  hideElement(overlay);
+  hideElement(overlayP2p);
 });
 displaySendP2p.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
-  showElement(overlay);
+  showElement(overlayP2p);
   showElement(sendGreyBox);
 });
 
@@ -401,9 +401,7 @@ overlayCash.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
   hideElement(overlayCash);
-  hideElement(DisplaybalDepositBtn);
 });
-///
 savedBeneBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(savedBeneBox);
@@ -430,8 +428,8 @@ overlayBene.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(overlayBene);
   hideElement(savedBeneBox);
+  hideElement(sendCashBox)
 });
-///
 savedRecipientBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(savedRecipientBox);
@@ -443,7 +441,6 @@ goBackToCashSecRec.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedRecipientBox);
   showElement(sendCashBox);
-  hideElementElement(overlayRec);
 });
 
 cancelRecipientBtn.addEventListener("click", (event) => {
@@ -469,56 +466,55 @@ overlayRec.addEventListener("click", (event) => {
   hideElement(savedRecipientBox);
 });
 
-//d
 //account Section
-euroFormBtn.addEventListener("click", function () {
-  showElement(requestAccForm);
-  showElement(overlay);
-  handleforeignword("EUR");
-});
-usdFormBtn.addEventListener("click", () => {
-  showElement(requestAccForm);
-  showElement(overlay);
-  handleforeignword("USD");
-});
-euroExitbtn.addEventListener("click", function () {
-  hideElement(requestAccForm);
-  hideElement(overlay);
-});
-euroExitCancel.addEventListener("click", function () {
-  hideElement(requestAccForm);
-  hideElement(overlay);
-});
-overlay.addEventListener("click", function () {
-  hideElement(requestAccForm);
-  hideElement(overlay);
-});
+// euroFormBtn.addEventListener("click", function () {
+//   showElement(requestAccForm);
+//   showElement(overlay);
+//   handleforeignword("EUR");
+// });
+// usdFormBtn.addEventListener("click", () => {
+//   showElement(requestAccForm);
+//   showElement(overlay);
+//   handleforeignword("USD");
+// });
+// euroExitbtn.addEventListener("click", function () {
+//   hideElement(requestAccForm);
+//   hideElement(overlay);
+// });
+// euroExitCancel.addEventListener("click", function () {
+//   hideElement(requestAccForm);
+//   hideElement(overlay);
+// });
+// overlay.addEventListener("click", function () {
+//   hideElement(requestAccForm);
+//   hideElement(overlay);
+// });
 
-//Balnce Section
-balSendBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  showElement(sendCashBox);
-});
-balDepositBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  showElement(DisplaybalDepositBtn);
-  showElement(overlay);
-});
+// //Balnce Section
+// balSendBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   showElement(sendCashBox);
+// });
+// balDepositBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   showElement(DisplaybalDepositBtn);
+//   showElement(overlay);
+// });
 
-exitDepositDesktop.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(DisplaybalDepositBtn);
-  hideElement(overlay);
-});
-exitDepositMobile.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(DisplaybalDepositBtn);
-  hideElement(overlay);
-});
-cancelTopUpBtn.addEventListener("click", () => {
-  hideElement(DisplaybalDepositBtn);
-  hideElement(overlay);
-});
+// exitDepositDesktop.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   hideElement(DisplaybalDepositBtn);
+//   hideElement(overlay);
+// });
+// exitDepositMobile.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   hideElement(DisplaybalDepositBtn);
+//   hideElement(overlay);
+// });
+// cancelTopUpBtn.addEventListener("click", () => {
+//   hideElement(DisplaybalDepositBtn);
+//   hideElement(overlay);
+// });
 
 //drop-menu
 dropHomePageBtn.addEventListener("click", function (event) {

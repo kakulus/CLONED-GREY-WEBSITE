@@ -10,10 +10,11 @@ const ProfilePageBtn = document.querySelector(".profile-page-btn");
 const VirtualPageBtn = document.querySelector(".virtual-page-btn");
 //Start Home Section
 const sendGreyBtn = document.querySelector(".send_money");
-const DisplayForignBox =document.querySelector('.create_foreign_acc')
+const DisplayForignBox = document.querySelector(".create_foreign_acc");
 const sendGreyBox = document.querySelector(".p2p");
 const GobackBtnP2p = document.querySelector(".go_back_left");
 const exitP2p = document.querySelector(".Exit_p2p_right");
+const exitP2pDesktop = document.querySelector(".exit_btn_p2p");
 const sendCashBtn = document.querySelector(".send_cash_btn");
 const sendCashBox = document.querySelector(".send_cash_box");
 const exitCash = document.querySelector(".Exit_cash_right");
@@ -21,6 +22,11 @@ const cancelP2pBtn = document.querySelector(".back_btn");
 const proceedP2pBtn = document.querySelector(".for_btn");
 const displaySendP2p = document.querySelector(".display_send_p2p");
 const cashExit = document.querySelector(".exit_btn_cash");
+
+const overlayP2p = document.querySelector(".overlay_p2p ");
+const overlayCash = document.querySelector(".overlay_cash");
+const overlayBene = document.querySelector(".overlay_bene");
+const overlayRec = document.querySelector(".overlay_Recipient");
 
 const savedBeneBtn = document.querySelector(".sends_funds_two");
 const savedBeneBox = document.querySelector(".save_beneficiaries");
@@ -61,7 +67,6 @@ const DisplaybalDepositBtn = document.querySelector(".Deposit_top_up_funds");
 const exitDepositMobile = document.querySelector(".Exit_top_up_right");
 const exitDepositDesktop = document.querySelector(".exit_btn_top_up");
 const cancelTopUpBtn = document.querySelector(".back_btn_top_up");
-
 
 //End balance
 
@@ -192,20 +197,6 @@ function handleforeignword(foreignword) {
   foreignChanges1.textContent = foreignword;
   foreignChanges2.textContent = foreignword;
   foreignChanges3.textContent = foreignword;
-}
-function handleForeignBox(box) {
-  balancePage;
-  foreignBox;
-
-  //create the new box element
-
-  let newBox = document.createElement("div");
-  newBox.classList.add(box);
-  balancePage.replaceChild(newBox, foreignBox);
-
-  var innerBox = foreignBox.querySelector("article");
-  var newInnerBox = innerBox.cloneNode(true);
-  newBox.appendChild(newInnerBox);
 }
 
 invoicebh1.classList.remove("hide");
@@ -346,7 +337,6 @@ balSecLine4.addEventListener("click", function () {
 });
 
 //Home section
-
 DisplayForignBox.addEventListener("click", function (event) {
   event.preventDefault();
   navigateToPage(balancePage, "Balance");
@@ -354,7 +344,11 @@ DisplayForignBox.addEventListener("click", function (event) {
 sendGreyBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(sendGreyBox);
-  showElement(overlay);
+  showElement(overlayP2p);
+});
+overlayP2p.addEventListener("click", () => {
+  hideElement(sendGreyBox);
+  hideElement(overlay);
 });
 
 GobackBtnP2p.addEventListener("click", (event) => {
@@ -363,6 +357,11 @@ GobackBtnP2p.addEventListener("click", (event) => {
   hideElement(overlay);
 });
 exitP2p.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(sendGreyBox);
+  hideElement(overlay);
+});
+exitP2pDesktop.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendGreyBox);
   hideElement(overlay);
@@ -376,95 +375,98 @@ euroExitCancel.addEventListener("click", () => {
   hideElement(sendGreyBox);
   hideElement(overlay);
 });
-
-overlay.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(sendGreyBox);
-  hideElement(sendCashBox);
-  hideElement(overlay);
-  hideElement(savedBeneBox);
-  hideElement(savedRecipientBox);
-});
-
-sendCashBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  showElement(sendCashBox);
-  showElement(overlay);
-});
-exitCash.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(sendCashBox);
-  hideElement(overlay);
-});
-cashExit.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(sendCashBox);
-  hideElement(overlay);
-});
 displaySendP2p.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
   showElement(overlay);
   showElement(sendGreyBox);
 });
+
+sendCashBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(sendCashBox);
+  showElement(overlayCash);
+});
+exitCash.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(sendCashBox);
+  hideElement(overlayCash);
+});
+cashExit.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(sendCashBox);
+  hideElement(overlayCash);
+});
+overlayCash.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(sendCashBox);
+  hideElement(overlayCash);
+  hideElement(DisplaybalDepositBtn);
+});
+///
 savedBeneBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(savedBeneBox);
-  showElement(overlay);
+  showElement(overlayBene);
   hideElement(sendCashBox);
 });
 goBackToCashSec.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedBeneBox);
   showElement(sendCashBox);
-  showElement(overlay);
+  showElement(overlayBene);
 });
 exitBeneDesktop.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedBeneBox);
-  hideElement(overlay);
+  hideElement(overlayBene);
 });
 exitBeneMobile.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedBeneBox);
-  hideElement(overlay);
+  hideElement(overlayBene);
 });
+overlayBene.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(overlayBene);
+  hideElement(savedBeneBox);
+});
+///
 savedRecipientBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(savedRecipientBox);
-  showElement(overlay);
+  showElement(overlayRec);
   hideElement(sendCashBox);
 });
 
 goBackToCashSecRec.addEventListener("click", (event) => {
-  event.preventDefault(savedRecipientBox);
+  event.preventDefault();
   hideElement(savedRecipientBox);
   showElement(sendCashBox);
-  showElement(overlay);
+  hideElementElement(overlayRec);
 });
 
 cancelRecipientBtn.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedRecipientBox);
-  hideElement(overlay);
+  hideElement(overlayRec);
 });
 exitRecipientDesktop.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedRecipientBox);
-  hideElement(overlay);
+  hideElement(overlayRec);
+  hideElement(sendCashBox);
 });
 exitRecipientMobile.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedRecipientBox);
-  hideElement(overlay);
-});
-overlay.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(sendGreyBox);
+  hideElement(overlayRec);
   hideElement(sendCashBox);
-  hideElement(overlay);
+});
+overlayRec.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(overlayRec);
   hideElement(savedRecipientBox);
-  hideElement(DisplaybalDepositBtn)
 });
 
 //d
@@ -493,16 +495,15 @@ overlay.addEventListener("click", function () {
 });
 
 //Balnce Section
-balSendBtn.addEventListener('click', (event) => { 
-  event.preventDefault()
-  showElement(sendCashBox)
-})
+balSendBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(sendCashBox);
+});
 balDepositBtn.addEventListener("click", (event) => {
   event.preventDefault();
   showElement(DisplaybalDepositBtn);
   showElement(overlay);
 });
-
 
 exitDepositDesktop.addEventListener("click", (event) => {
   event.preventDefault();

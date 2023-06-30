@@ -587,7 +587,7 @@ body {
   border-radius: 8px;
   border: none;
 }
-.exit_btn {
+.exit_btn_p2p {
   display: none;
   z-index: 300;
 }
@@ -1157,7 +1157,7 @@ body {
     bottom: 0%;
   }
 
-  .p2p .exit_btn {
+  .p2p .exit_btn_p2p {
     display: block;
     height: 25px;
     padding: 4px 5px;
@@ -1167,6 +1167,7 @@ body {
     border-radius: 100px;
     background-color: #fff;
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    z-index: 300;
   }
   .Exit_p2p_right {
     display: none;
@@ -1175,7 +1176,7 @@ body {
     display: none;
   }
 
-  .p2p .overlay {
+  .p2p .overlay_p2p {
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1188,7 +1189,7 @@ body {
     right: 0;
     left: 0;
   }
-  .save_beneficiaries .overlay {
+  .send_cash_box .overlay_cash{
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1201,7 +1202,7 @@ body {
     right: 0;
     left: 0;
   }
-  .send_cash_box .overlay {
+  .save_beneficiaries .overlay_bene {
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1214,7 +1215,7 @@ body {
     right: 0;
     left: 0;
   }
-  .New_recipient .overlay {
+  .New_recipient .overlayRecipient {
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1319,8 +1320,8 @@ body {
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
     z-index: 300;
   }
+  
 }
-
 @media only screen and (min-width: 1200px) {
   .dashboard {
     display: flex;

@@ -10,23 +10,24 @@ const ProfilePageBtn = document.querySelector(".profile-page-btn");
 const VirtualPageBtn = document.querySelector(".virtual-page-btn");
 //Start Home Section
 const sendGreyBtn = document.querySelector(".send_money");
-const DisplayForignBox = document.querySelector(".create_foreign_acc");
+const DisplayForeignBox = document.querySelector(".create_foreign_acc");
 const sendGreyBox = document.querySelector(".p2p");
 const GobackBtnP2p = document.querySelector(".go_back_left");
 const exitP2p = document.querySelector(".Exit_p2p_right");
 const exitP2pDesktop = document.querySelector(".exit_btn_p2p");
 const sendCashBtn = document.querySelector(".send_cash_btn");
 const sendCashBox = document.querySelector(".send_cash_box");
-const exitCash = document.querySelector(".Exit_cash_right");
+const exitCashMobile = document.querySelector(".Exit_cash_right");
 const cancelP2pBtn = document.querySelector(".back_btn");
-const proceedP2pBtn = document.querySelector(".for_btn");
+// const proceedP2pBtn = document.querySelector(".for_btn");
 const displaySendP2p = document.querySelector(".display_send_p2p");
-const cashExit = document.querySelector(".exit_btn_cash");
+const cashExitDesktop = document.querySelector(".exit_btn_cash");
 
-const overlayP2p = document.querySelector(".overlay_p2p ");
+const overlayP2p = document.querySelector(".overlay_p2p");
 const overlayCash = document.querySelector(".overlay_cash");
 const overlayBene = document.querySelector(".overlay_bene");
-const overlayRec = document.querySelector(".overlay_Recipient");
+const overlayRec = document.querySelector(".overlayRecipient");
+const overlaydeposit = document.querySelector(".overlayDeposit");
 
 const savedBeneBtn = document.querySelector(".sends_funds_two");
 const savedBeneBox = document.querySelector(".save_beneficiaries");
@@ -40,29 +41,26 @@ const goBackToCashSecRec = document.querySelector(".go_back_left_recipient");
 const exitRecipientMobile = document.querySelector(".Exit_recipient_right");
 const exitRecipientDesktop = document.querySelector(".exit_btn_recipient");
 const cancelRecipientBtn = document.querySelector(".back_btn_recipient");
-const proceedRecipientBtn = document.querySelector(".for_btn_recipient");
+// const proceedRecipientBtn = document.querySelector(".for_btn_recipient");
 
 //  End Home Section
 //Start Balance section
 const usdPageBtn = document.querySelector(".usdcard");
 const gbpPageBtn = document.querySelector(".gbpcard");
 const euroPageBtn = document.querySelector(".eurocard");
-const ngnPageBtn = document.querySelector(".ngncard");
+
 const currencyChangeBtn = document.querySelector(".chg");
 const currencyChangeBtntwo = document.querySelector(".chg2");
 const currencyChangeBtnthree = document.querySelector(".chg3");
 const currencyChangeBtnFour = document.querySelector(".chg4");
 const currencyChangeBtnFive = document.querySelector(".chg5");
-const altPageBtn = document.querySelectorAll(".Balance-cards");
 const balSecLine1 = document.querySelector(".bal-title1");
 const balSecLine2 = document.querySelector(".bal-title2");
 const balSecLine3 = document.querySelector(".bal-title3");
-const balSecLine4 = document.querySelector(".bal-title4");
-const foreignBox = document.querySelector(".for-acc");
 const balanceLine = document.querySelectorAll(".country");
-const balDepositBtn = document.querySelector(".deposit_btn");
+const balDepositBtn = document.querySelector(".deposit_btn_balance");
 const balSendBtn = document.querySelector(".send_btn");
-const balSwapBtn = document.querySelector(".swap_btn");
+// const balSwapBtn = document.querySelector(".swap_btn");
 const DisplaybalDepositBtn = document.querySelector(".Deposit_top_up_funds");
 const exitDepositMobile = document.querySelector(".Exit_top_up_right");
 const exitDepositDesktop = document.querySelector(".exit_btn_top_up");
@@ -72,18 +70,13 @@ const cancelTopUpBtn = document.querySelector(".back_btn_top_up");
 
 //Start account
 
-const usdForeignBox = document.querySelector(".usdbox");
-const euroForeignBox = document.querySelector(".eurobox");
-const gbpForeignBox = document.querySelector(".gbpbox");
-const ngnForeignBox = document.querySelector(".ngnbox");
-
 const euroFormBtn = document.querySelector(".openeuroform");
-const requestAccForm = document.querySelector(".euroform");
-const overlay = document.querySelector(".overlay");
-const euroExitbtn = document.querySelector(".euroexit");
-const euroExitCancel = document.querySelector(".exit_btn");
 const usdFormBtn = document.querySelector(".openusdform");
-
+const GbpFormBtn = document.querySelector(".opengbpform"); 
+const requestAccForm = document.querySelector(".acc_form");
+const overlayacc = document.querySelector(".overlayacc");
+const AccExitbtn = document.querySelector(".acc_exit");
+const AccExitCancel = document.querySelector(".exit_btn");
 const foreignChanges1 = document.querySelector(".acc_chg");
 const foreignChanges2 = document.querySelector(".acc_chg1");
 const foreignChanges3 = document.querySelector(".acc_chg2");
@@ -164,7 +157,7 @@ function hideElement(element) {
   element.classList.add("hide");
 }
 //function to navigate through pages
-function navigateToPage(page, name, currency) {
+function navigateToPage(page, name) {
   const pages = [
     homePage,
     balancePage,
@@ -206,61 +199,58 @@ requestBenefitPage.classList.remove("hide");
 homePage.classList.remove("hidden");
 basicInfoPage.classList.remove("hide");
 
-invoiceBtn.addEventListener("click", function () {
+invoiceBtn.addEventListener("click", () => {
   showElement(invoicebh1);
   showElement(invoicebh2);
   hideElement(invoiceCustomers);
 });
-customerBtn.addEventListener("click", function () {
+customerBtn.addEventListener("click", () => {
   hideElement(invoicebh1);
   hideElement(invoicebh2);
   showElement(invoiceCustomers);
 });
-foreignbtn.addEventListener("click", function () {
+foreignbtn.addEventListener("click", () => {
   showElement(foreignPage);
   hideElement(requestPage);
 });
-requestbtn.addEventListener("click", function () {
+requestbtn.addEventListener("click", () => {
   hideElement(foreignPage);
   showElement(requestPage);
 });
-requestBenefitBtn.addEventListener("click", function () {
+requestBenefitBtn.addEventListener("click", () => {
   showElement(requestBenefitPage);
   hideElement(cardPage);
 });
-cardBtn.addEventListener("click", function () {
+cardBtn.addEventListener("click", () => {
   hideElement(requestBenefitPage);
   showElement(cardPage);
 });
-BasicInfoBtn.addEventListener("click", function () {
+BasicInfoBtn.addEventListener("click", () => {
   showElement(basicInfoPage);
   hideElement(NotisPage);
   hideElement(securityPage);
   hideElement(limitPage);
-  console.log("Basic");
 });
-NotisSetBtn.addEventListener("click", function () {
+NotisSetBtn.addEventListener("click", () => {
   hideElement(basicInfoPage);
   showElement(NotisPage);
   hideElement(securityPage);
   hideElement(limitPage);
-  console.log("notis");
 });
-securityBtn.addEventListener("click", function () {
+securityBtn.addEventListener("click", () => {
   hideElement(basicInfoPage);
   hideElement(NotisPage);
   showElement(securityPage);
   hideElement(limitPage);
-  console.log("sec");
 });
-LimitBtn.addEventListener("click", function () {
+LimitBtn.addEventListener("click", () => {
   hideElement(basicInfoPage);
   hideElement(NotisPage);
   hideElement(securityPage);
   showElement(limitPage);
 });
 
-homePageBtn.addEventListener("click", function (event) {
+homePageBtn.addEventListener("click", (event) => {
   event.preventDefault();
   navigateToPage(
     homePage,
@@ -305,22 +295,14 @@ VirtualPageBtn.addEventListener("click", function (event) {
 usdPageBtn.addEventListener("click", function () {
   navigateToPage(balancePage, "Balance");
   handleBalance("USD");
-  handleForeignBox(usdForeignBox);
 });
 gbpPageBtn.addEventListener("click", function () {
   navigateToPage(balancePage, "Balance");
   handleBalance("GBP");
-  handleForeignBox(gbpForeignBox);
 });
 euroPageBtn.addEventListener("click", function () {
   navigateToPage(balancePage, "Balance");
   handleBalance("EURO");
-  handleForeignBox(euroForeignBox);
-});
-ngnPageBtn.addEventListener("click", function () {
-  navigateToPage(balancePage, "Balance");
-  handleBalance("NGN");
-  handleForeignBox();
 });
 
 balSecLine1.addEventListener("click", function () {
@@ -332,14 +314,11 @@ balSecLine2.addEventListener("click", function () {
 balSecLine3.addEventListener("click", function () {
   handleBalance("GBP");
 });
-balSecLine4.addEventListener("click", function () {
-  handleBalance("NGN");
-});
 
 //Home section
-DisplayForignBox.addEventListener("click", function (event) {
+DisplayForeignBox.addEventListener("click", function (event) {
   event.preventDefault();
-  navigateToPage(balancePage, "Balance");
+  navigateToPage(accountPage, "Account");
 });
 sendGreyBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -371,10 +350,7 @@ cancelP2pBtn.addEventListener("click", (event) => {
   hideElement(sendGreyBox);
   hideElement(overlayP2p);
 });
-euroExitCancel.addEventListener("click", () => {
-  hideElement(sendGreyBox);
-  hideElement(overlayP2p);
-});
+
 displaySendP2p.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
@@ -387,12 +363,12 @@ sendCashBtn.addEventListener("click", (event) => {
   showElement(sendCashBox);
   showElement(overlayCash);
 });
-exitCash.addEventListener("click", (event) => {
+exitCashMobile.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
   hideElement(overlayCash);
 });
-cashExit.addEventListener("click", (event) => {
+cashExitDesktop.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(sendCashBox);
   hideElement(overlayCash);
@@ -411,8 +387,9 @@ savedBeneBtn.addEventListener("click", (event) => {
 goBackToCashSec.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(savedBeneBox);
+  hideElement(overlayBene);
   showElement(sendCashBox);
-  showElement(overlayBene);
+  showElement(overlayCash);
 });
 exitBeneDesktop.addEventListener("click", (event) => {
   event.preventDefault();
@@ -428,93 +405,91 @@ overlayBene.addEventListener("click", (event) => {
   event.preventDefault();
   hideElement(overlayBene);
   hideElement(savedBeneBox);
-  hideElement(sendCashBox)
-});
-savedRecipientBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  showElement(savedRecipientBox);
-  showElement(overlayRec);
-  hideElement(sendCashBox);
 });
 
-goBackToCashSecRec.addEventListener("click", (event) => {
-  event.preventDefault();
+savedRecipientBtn.addEventListener("click", () => {
+  hideElement(sendCashBox);
+  hideElement(overlayCash);
+  showElement(savedRecipientBox);
+  showElement(overlayRec);
+});
+overlayRec.addEventListener("click", () => {
+  hideElement(overlayRec);
+  hideElement(savedRecipientBox);
+});
+goBackToCashSecRec.addEventListener("click", () => {
   hideElement(savedRecipientBox);
   showElement(sendCashBox);
 });
 
-cancelRecipientBtn.addEventListener("click", (event) => {
-  event.preventDefault();
+cancelRecipientBtn.addEventListener("click", () => {
   hideElement(savedRecipientBox);
   hideElement(overlayRec);
 });
-exitRecipientDesktop.addEventListener("click", (event) => {
-  event.preventDefault();
+exitRecipientDesktop.addEventListener("click", () => {
   hideElement(savedRecipientBox);
   hideElement(overlayRec);
   hideElement(sendCashBox);
 });
-exitRecipientMobile.addEventListener("click", (event) => {
-  event.preventDefault();
+exitRecipientMobile.addEventListener("click", () => {
   hideElement(savedRecipientBox);
   hideElement(overlayRec);
-  hideElement(sendCashBox);
-});
-overlayRec.addEventListener("click", (event) => {
-  event.preventDefault();
-  hideElement(overlayRec);
-  hideElement(savedRecipientBox);
 });
 
 //account Section
-// euroFormBtn.addEventListener("click", function () {
-//   showElement(requestAccForm);
-//   showElement(overlay);
-//   handleforeignword("EUR");
-// });
-// usdFormBtn.addEventListener("click", () => {
-//   showElement(requestAccForm);
-//   showElement(overlay);
-//   handleforeignword("USD");
-// });
-// euroExitbtn.addEventListener("click", function () {
-//   hideElement(requestAccForm);
-//   hideElement(overlay);
-// });
-// euroExitCancel.addEventListener("click", function () {
-//   hideElement(requestAccForm);
-//   hideElement(overlay);
-// });
-// overlay.addEventListener("click", function () {
-//   hideElement(requestAccForm);
-//   hideElement(overlay);
-// });
+euroFormBtn.addEventListener("click", function () {
+  showElement(requestAccForm);
+  showElement(overlayacc);
+  handleforeignword("EUR");
+});
+usdFormBtn.addEventListener("click", () => {
+  showElement(requestAccForm);
+  showElement(overlayacc);
+  handleforeignword("USD");
+});
+GbpFormBtn.addEventListener("click", () => {
+  showElement(requestAccForm);
+  showElement(overlayacc);
+  handleforeignword("GBP");
+});
+AccExitbtn.addEventListener("click", function () {
+  hideElement(requestAccForm);
+  hideElement(overlayacc);
+});
+AccExitCancel.addEventListener("click", function () {
+  hideElement(requestAccForm);
+  hideElement(overlayacc);
+});
+overlayacc.addEventListener("click", function () {
+  hideElement(requestAccForm);
+  hideElement(overlayacc);
+});
 
-// //Balnce Section
-// balSendBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   showElement(sendCashBox);
-// });
-// balDepositBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   showElement(DisplaybalDepositBtn);
-//   showElement(overlay);
-// });
+//Balnce Section
+balSendBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(sendCashBox);
+});
+balDepositBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(DisplaybalDepositBtn);
+  showElement(overlaydeposit);
+});
 
-// exitDepositDesktop.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   hideElement(DisplaybalDepositBtn);
-//   hideElement(overlay);
-// });
-// exitDepositMobile.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   hideElement(DisplaybalDepositBtn);
-//   hideElement(overlay);
-// });
-// cancelTopUpBtn.addEventListener("click", () => {
-//   hideElement(DisplaybalDepositBtn);
-//   hideElement(overlay);
-// });
+exitDepositDesktop.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(DisplaybalDepositBtn);
+  hideElement(overlaydeposit);
+});
+exitDepositMobile.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(DisplaybalDepositBtn);
+  hideElement(overlaydeposit);
+});
+cancelTopUpBtn.addEventListener("click", () => {
+  hideElement(DisplaybalDepositBtn);
+  hideElement(overlaydeposit);
+});
 
 //drop-menu
 dropHomePageBtn.addEventListener("click", function (event) {
@@ -556,6 +531,7 @@ dropVirtualPageBtn.addEventListener("click", function (event) {
   event.preventDefault();
   navigateToPage(VirtualPage, "Virtual Card");
 });
+
 //Tab line
 tabline.forEach((item) => {
   item.addEventListener("click", function () {
@@ -600,7 +576,7 @@ MB.forEach((Menu_bar) => {
 });
 
 balanceLine.forEach((bal_sec) => {
-  bal_sec.addEventListener("click", function () {
+  bal_sec.addEventListener("click", () => {
     balanceLine.forEach((bal_sec) => {
       bal_sec.classList.remove("bal_active");
     });

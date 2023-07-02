@@ -109,7 +109,7 @@ body {
   flex-direction: column;
   padding: 0px 15px 0px 16px;
   background-color: white;
-  background-image: url("./backgroungimg.svg");
+  background-image: url("svg/backgroungimg.svg");
 }
 .dropdownmenu .nav-img {
   align-self: center;
@@ -1130,7 +1130,7 @@ body {
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
     z-index: 300;
   }
-  .Deposit_top_up_funds .overlay {
+  .Deposit_top_up_funds .overlayDeposit {
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1234,12 +1234,13 @@ body {
     bottom: 10%;
     left: 30%;
     right: 0;
-    z-index: 130;
+    z-index: 400;
   }
   .send_cash {
     width: 400px;
     border-radius: 10px;
     height: 300px;
+    z-index: 400;
   }
   .save_beneficiaries {
     display: flex;
@@ -1337,7 +1338,7 @@ body {
     flex-direction: column;
     width: 20%;
     height: 100vh;
-    background-image: url("./backgroungimg.svg");
+    background-image: url("svg/backgroungimg.svg");
     padding: 0px 15px 0px 16px;
     z-index: 100;
   }

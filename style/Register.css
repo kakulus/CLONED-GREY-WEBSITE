@@ -13,10 +13,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
 }
 body {
-  background-image: url("./backgroungimg.svg");
+  background-image: url("svg/backgroungimg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -28,59 +27,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.nav{
-  position: relative;
-  top: 0px;
-  background-color: white;
-  border: 1px solid rgb(229, 233, 241);
-  border-radius: 8px;
-
-}
-.nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   margin: auto;
-  padding: 10px;
-
+  margin-top: 50px;
 }
-.nav ul li{
-padding-left: 10px;
-font-size: 15px;
-font-family: 'Aeonik';
-font-weight: bold;
-}
-.nav ul li span{
-background-color: darkblue;
-color: white;
-padding: 3px 8px;
-border-radius: 100px;
-}
-
-
-
-
-
-
-
-.Doc-form {
+.Register-page .Reg-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid rgb(229, 233, 241);
-  height: 1050px;
+  height: 970px;
   width: 360px;
   background-color: white;
   border-radius: 8px;
-  margin-bottom: 30px;  
-  margin-top: 50px;
 }
-.Doc-text {
+.Register-page .Reg-text {
   margin: 15px;
   align-self: flex-start;
 }
-.Doc-text h3 {
+.Register-page .Reg-text h3 {
   font-family: "Aeonik", sans-serif;
   text-align: left;
   margin-bottom: 30px;
@@ -95,111 +59,87 @@ hr {
   height: 2px;
   margin: 5px 3px;
 }
-.Doc-form .DOB,
-.Gender,
-.job,
-.country,
-.state,
-.city,
-.add,
-.bill,
-.purpose {
+.Reg-form .F-name,
+.M-name,
+.L-name,
+.Email,
+.p-No,
+.Ref,
+.password {
   align-self: flex-start;
   padding-left: 25px;
   font-size: 14px;
   font-family: "Aeonik";
   color: #444a58;
 }
-
-.Doc-form  select {
+.Reg-form input[type="text"] {
   font-family: "Aeonik";
   font-weight: bold;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(229, 233, 241);
   box-sizing: border-box;
-  padding: 12px 107px;
+  padding: 12px 80px;
   border-radius: 8px;
   margin-top: 5px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  color: #222;
-}
-.Doc-form  .purposes{
-  font-family: "Aeonik";
-  font-weight: bold;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(229, 233, 241);
-  box-sizing: border-box;
-  padding: 12px ;
-  width: 340px;
-  border-radius: 8px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 20px;
   color: #222;
 }
 
-
-.Doc-form input[type="text"],
-input[type="date"] {
+.Reg-form input[type="password"] {
   font-family: "Aeonik";
   font-weight: bold;
   background: rgb(255, 255, 255);
   border: 1px solid rgb(229, 233, 241);
   box-sizing: border-box;
-  padding: 12px 89px;
+  padding: 12px 80px;
   border-radius: 8px;
   margin-top: 5px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  color: #222;
-}
-.Doc-form  input[type="date"] {
-  font-family: "Aeonik";
-  font-weight: bold;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(229, 233, 241);
-  box-sizing: border-box;
-  padding: 12px 110px;
-  border-radius: 8px;
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.Doc-form input[type="file"] {
-  font-family: "Aeonik";
-  font-weight: bold;
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(229, 233, 241);
-  box-sizing: border-box;
-  padding: 11px 22px;
-  border-radius: 8px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 20px;
   color: rgb(34, 34, 34) !important;
 }
 .rule {
-padding: 10px;
-}
-.rule ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.rule ul li{
-  list-style: none;
-  font-size: 15px;
-  font-family: 'Aeonik';
+.rule p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 7px;
+}
+.rule .rul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.rules {
+  font-size: 17px;
+  border: 2px black;
+  border-style: dotted;
+  border-radius: 100px;
+  margin: 5px 3px;
+  padding: 6px;
+}
+.check {
+  margin: 12px 0px;
+}
+.check .agree {
+  font-size: 14px;
+  font-family: "Aeonik";
   font-weight: bold;
 }
-.rule ul img {
-  width: 16px;
+.check .agree .tems,
+.agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
 }
-
-.Doc-btn {
+.Reg-btn {
   width: 340px;
   height: 40px;
   border: none;
@@ -209,16 +149,33 @@ padding: 10px;
   background: rgb(242, 242, 242);
   cursor: not-allowed;
 }
-.Doc-btn a {
+.Reg-btn  a{
   color: rgb(191, 191, 191);
   text-decoration: none;
 }
-
+.quest {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: url("./backgroungimg.svg");
+}
+.quest .tems {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.quest .agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
 .lang {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
 }
 .lang .language {
   font-size: 14px;
@@ -232,201 +189,186 @@ padding: 10px;
   height: 35px;
   border: none;
   background-color: #f0f6fe;
-  border: none;
 }
-@media only screen and (min-width: 767px){
+@media only screen and (min-width: 767px) {
+  .Non-reg-form {
+    display: none;
+  }
   .page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .nav{
-    position: inherit;
-    background-color: white;
-    border: 1px solid rgb(229, 233, 241);
-    border-radius: 8px;
-  
-  }
-  .nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     margin: auto;
-    padding: 10px;
-  
+    margin-top: 50px;
   }
-  .nav ul li{
-  padding-left: 10px;
-  font-size: 15px;
-  font-family: 'Aeonik';
-  font-weight: bold;
-  }
-  .nav ul li span{
-  background-color: darkblue;
-  color: white;
-  padding: 3px 8px;
-  border-radius: 100px;
-  }
-  .Doc-form {
+  .page .Reg-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid rgb(229, 233, 241);
-    height: 870px;
+    height: 750px;
     width: 470px;
     background-color: white;
     border-radius: 8px;
   }
-  .Doc-text {
+  .Reg-form .Reg-text {
     margin: 15px;
     align-self: flex-start;
   }
-  .Doc-text h3 {
+  .Reg-form .Reg-text h3 {
     font-family: "Aeonik", sans-serif;
     text-align: left;
     margin-bottom: 30px;
-    font-size: 21px;
+    font-size: 25px;
     color: #333333;
     font-weight: bold;
   }
   hr {
     background-color: black;
     align-self: center;
-    width: 340px;
+    width: 450px;
     height: 2px;
     margin: 5px 3px;
   }
-  .Doc-form .DOB,
-  .Gender,
-  .job,
-  .country,
-  .state,
-  .city,
-  .add,
-  .bill,
-  .purpose {
-    align-self: flex-start;
-    padding-left: 25px;
-    font-size: 14px;
-    font-family: "Aeonik";
-    color: #444a58;
-  }
-  
-  .Doc-form .column1,
+  .Reg-form .column1,
   .column2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0px;
   }
-  .Doc-form .column1 select {
+  .Reg-form .column1 input[type="text"] {
+    padding: 12px 25px;
+    margin-left: 10px;
+  }
+  .Reg-form .column2 input[type="text"] {
+    padding: 12px 25px;
+    margin-left: 10px;
+  }
+
+  .Reg-form .F-name,
+  .M-name,
+  .L-name,
+  .Email,
+  .p-No,
+  .Ref,
+  .password {
+    align-self: flex-start;
+    padding-left: 15px;
+    font-size: 15px;
+    font-family: "Aeonik";
+    color: #444a58;
+  }
+  .Reg-form input[type="text"] {
     font-family: "Aeonik";
     font-weight: bold;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(229, 233, 241);
     box-sizing: border-box;
-    padding: 12px ;
-    width: 217px;
+    padding: 12px 140px;
     border-radius: 8px;
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 20px;
     color: #222;
   }
-  .Doc-form .column1 .occupation{
-    width: 216px;
-    padding: 12px;
-  }
-  .Doc-form .column2 select {
-    font-family: "Aeonik";
-    font-weight: bold;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(229, 233, 241);
-    box-sizing: border-box;
-    padding: 12px ;
-   width: 217px;
-    border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
-  .Doc-form input[type="text"],
-  input[type="date"] {
-    font-family: "Aeonik";
-    font-weight: bold;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(229, 233, 241);
-    box-sizing: border-box;
-    padding: 12px 145px;
-    border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 13px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  .Doc-form  input[type="date"] {
-    font-family: "Aeonik";
-    font-weight: bold;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(229, 233, 241);
-    box-sizing: border-box;
-    padding: 12px 165px;
-    border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  
-  .Doc-form input[type="file"] {
-    font-family: "Aeonik";
-    font-weight: bold;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(229, 233, 241);
-    box-sizing: border-box;
-    padding: 10px 76px;
-    border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 15px;
-    margin-bottom: 20px;
-    color: rgb(34, 34, 34) !important;
-  }
-  .Doc-form  .purposes{
-    font-family: "Aeonik";
-    font-weight: bold;
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(229, 233, 241);
-    box-sizing: border-box;
-    padding: 12px ;
-    width: 453px;
-    border-radius: 8px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-  .rule ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .rule ul img {
-    width: 16px;
-  }
-  
-  .Doc-btn {
-    width: 430px;
-    height: 40px;
-    border: none;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 5px;
-    background: rgb(242, 242, 242);
-    cursor: not-allowed;
-  }
+
+.Reg-form input[type="password"] {
+  padding: 12px 140px;
+  margin-left: 10px;
+
 }
-@media only screen and (min-width: 1200px){
+.rule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.rule p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  align-self: flex-start;
+  margin-left: 7px;
+}
+.rule .rul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.rules {
+  font-size: 17px;
+  border: 2px black;
+  border-style: dotted;
+  border-radius: 100px;
+  margin: 5px 3px;
+  padding: 6px;
+}
+.check {
+  margin: 12px 0px;
+}
+.check .agree {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.check .agree .tems,
+.agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.Reg-btn {
+  width: 340px;
+  height: 40px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  background: rgb(242, 242, 242);
+  color: rgb(191, 191, 191);
+  cursor: not-allowed;
+}
+.quest {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-image: url("./backgroungimg.svg");
+}
+.quest .tems {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.quest .agee {
+  font-size: 14px;
+  font-family: "Aeonik";
+  color: rgb(61, 135, 245);
+  font-weight: bold;
+}
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang .language {
+  font-size: 14px;
+  font-family: "Aeonik";
+  font-weight: bold;
+}
+.lang .choose {
+  margin: 2px;
+  border-radius: 9px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: #f0f6fe;
+}
+}
+
+@media only screen and (min-width: 1200px) {
   .Register-page {
     display: flex;
     justify-content: space-around;
@@ -517,4 +459,3 @@ padding: 10px;
     width: 50%;
   }
 }
-

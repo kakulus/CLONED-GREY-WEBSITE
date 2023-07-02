@@ -150,15 +150,15 @@ body {
   font-family: "Aeonik", sans-serif;
   font-weight: bold;
 }
-.euroform {
+.acc_form {
   align-self: center;
   display: flex;
   position: fixed;
   bottom: 0%;
-  z-index: 14;
+  z-index: 300;
   transition: all 300ms ease;
 }
-.euroformbox {
+.acc_formbox {
   display: flex;
   height: 100%;
   min-height: 450px;
@@ -170,33 +170,34 @@ body {
   padding: 20px;
   border-radius: 15px 15px 0px 0px;
   transition: all 300ms ease;
+  z-index: 300;
 }
-.eurohead {
+.acc_head {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 20px;
 }
-.eurohead h3 {
+.acc_head h3 {
   font-family: "Aeonik", sans-serif;
   font-size: 20px;
   color: #27303d;
 }
-.eurohead .bank-box {
+.acchead .bank-box {
   background-color: #f0f6fe;
   color: #3d87f5;
   padding: 3px 6px;
   border-radius: 4px;
   margin-right: 10px;
 }
-.euroconfirm {
+.acc_confirm {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fffae6;
   border-radius: 10px;
 }
-.euroconfirm h4 {
+.acc_confirm h4 {
   font-family: "Aeonik", sans-serif;
   font-size: 16px;
   color: #333333;
@@ -205,7 +206,7 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
-.euroconfirm p {
+.acc_confirm p {
   font-family: "Aeonik", sans-serif;
   font-size: 14px;
   color: #808080;
@@ -214,8 +215,8 @@ body {
   line-height: 18px;
   margin: 0px 10px 10px 10px;
 }
-.euroform1,
-.euroform2 {
+.acc_form1,
+.acc_form2 {
   width: 100%;
   display: flex;
   margin-top: 15px;
@@ -229,13 +230,13 @@ body {
   font-weight: 500;
   cursor: not-allowed;
 }
-.euroform2 span {
+.acc_form2 span {
   font-weight: bold;
 }
-.euroform1 span {
+.acc_form1 span {
   font-weight: bold;
 }
-.eurosubmit {
+.acc_submit {
   width: 100%;
   height: 55px;
   background-color: #3d87f5;
@@ -249,12 +250,13 @@ body {
   font-family: "Aeonik", sans-serif;
   margin: 20px 0px;
 }
-.euroexit {
+.acc_exit{
   color: #3d87f5;
   font-size: 16px;
   font-weight: bold;
   font-family: "Aeonik", sans-serif;
   cursor: pointer;
+  z-index: 300;
 }
 
 .exit_btn {
@@ -341,14 +343,15 @@ body {
     top: 50px;
     border-radius: 7px;
   }
-  .euroform {
+  .acc_form {
     align-self: center;
     display: flex;
     position: fixed;
     bottom: 10%;
-    z-index: 14;
+    z-index: 400;
+    left: 35%;
   }
-  .euroformbox {
+  .acc_formbox {
     width: 400px;
     border-radius: 10px;
   }
@@ -360,15 +363,18 @@ body {
     background-color: white;
     margin-left: 10px;
   }
-  .overlay {
-    position: absolute;
+  .acc_form .overlayacc {
+    background: rgba(46, 57, 83, 0.79);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 250;
+    position: fixed;
     top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(1px);
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 13;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -380,15 +386,17 @@ body {
   .hide {
     display: none;
   }
-  .euroform {
+  .acc_form {
     align-self: center;
     display: flex;
     position: fixed;
     bottom: 3%;
-    z-index: 14;
+    left: 34%;
+    z-index: 300;
   }
-  .euroformbox {
+  .acc_formbox {
     width: 400px;
     border-radius: 10px;
+    z-index: 300;
   }
 }

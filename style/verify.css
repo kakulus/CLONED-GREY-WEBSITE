@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("svg/backgroungimg.svg");
+  background-image: url("./backgroungimg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

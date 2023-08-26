@@ -90,6 +90,7 @@ body {
 .top select {
   padding: 3px 7px;
   border: none;
+  background: none;
 }
 .hide-menu {
   display: none;
@@ -109,7 +110,7 @@ body {
   flex-direction: column;
   padding: 0px 15px 0px 16px;
   background-color: white;
-  background-image: url("svg/backgroungimg.svg");
+  background-image: url("./backgroungimg.svg");
 }
 .dropdownmenu .nav-img {
   align-self: center;
@@ -304,7 +305,7 @@ body {
   border: none;
   padding: 12px 110px;
   font-size: 0.875rem;
-  background-color: rgb(255, 255, 255) !important;
+  background-color: rgb(255, 255, 255);
 }
 .middle_top_up .input {
   font-family: Aeonik;
@@ -392,6 +393,212 @@ body {
   border: none;
 }
 .exit_btn_top_up {
+  display: none;
+  z-index: 300;
+}
+
+.swap_funds {
+  align-self: center;
+  display: flex;
+  position: fixed;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  z-index: 300;
+}
+.swap_funds_box {
+  display: flex;
+  height: 100%;
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  border-radius: 15px 15px 0px 0px;
+  transition: all 300ms ease;
+  gap: 20px;
+  z-index: 300;
+}
+.go_icon_swap {
+  background-color: rgb(240, 246, 254);
+  padding: 10px 10px;
+  width: 35px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.go_back_left_swap {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.go_back_left_swap p {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.middle_swap {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 40px 10px;
+  align-items: center;
+  height: 550px;
+  scroll-behavior: smooth;
+}
+
+.swap_funds_box .exit_main_swap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.exit_main_swap .go_back_left_swap {
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+}
+.exit_main_swap .Exit_swap_right {
+  border: none;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px -5px;
+  z-index: 2147483647;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.swap_funds_box .middle_swap {
+  align-self: center;
+  display: flex;
+  padding: 0px 20px 32px;
+
+  flex-direction: column;
+}
+.middle_swap .inputs {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.middle_swap .inputs label {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #333333;
+  font-weight: 600;
+  /* position: relative;
+  left: 20px; */
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+.middle_swap .inputs select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 12px 110px;
+  font-size: 0.875rem;
+  background-color: rgb(255, 255, 255) !important;
+}
+.middle_swap .input {
+  font-family: Aeonik;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+}
+.middle_swap .inputs input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 12px;
+  font-size: 0.875rem;
+  background-color: rgb(255, 255, 255) !important;
+}
+.middle_swap .inputs:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.middle input[type="checkbox"] {
+  width: 25px;
+  border-radius: 20px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 8px;
+}
+.middle_swap .inputs:last-child p {
+  font-family: "Aeonik";
+  font-weight: bold;
+  color: #333333;
+  font-size: 15px;
+}
+.swap_funds_box .bottom_swap {
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  padding: 10px 20px 30px 10px;
+  gap: 10px;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  height: 20px;
+}
+.bottom_swap .back_btn_swap {
+  width: 70px;
+  height: 35px;
+  border: 1px solid #3d87f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #3d87f5;
+  background-color: #fff;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+}
+.for_btn_swap {
+  width: 70px;
+  height: 35px;
+  color: white;
+  background-color: #3d87f5;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+.exit_btn_swap {
   display: none;
   z-index: 300;
 }
@@ -1044,10 +1251,232 @@ body {
 .exit_btn_recipient {
   display: none;
 }
-@media only screen and (min-width: 750px) {
+
+.add_recipient {
+  align-self: center;
+  display: flex;
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  z-index: 300;
+}
+.add_recipient_box {
+  display: flex;
+  height: 100%;
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  border-radius: 15px 15px 0px 0px;
+  transition: all 300ms ease;
+  gap: 20px;
+  z-index: 300;
+}
+.go_icon_add_recipient {
+  background-color: rgb(240, 246, 254);
+  padding: 10px 10px;
+  width: 35px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.go_back_left_add_recipient {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.go_back_left_add_recipient p {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+.middle_add_recipient {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 40px 10px;
+  align-items: center;
+  height: 550px;
+  scroll-behavior: smooth;
+}
+
+.add_recipient_box .exit_main_add_recipient {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.exit_main_add_recipient .go_back_left_add_recipient {
+  font-size: 15px;
+  font-family: "Aeonik", sans-serif;
+  color: #1a1a1a;
+}
+.exit_main_add_recipient .Exit_add_recipient_right {
+  border: none;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px -5px;
+  z-index: 2147483647;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.add_recipient_box .middle_add_recipient {
+  align-self: center;
+  display: flex;
+  padding: 0px 20px 32px;
+
+  flex-direction: column;
+}
+.middle_add_recipient .inputs {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.middle_add_recipient .inputs label {
+  font-size: 16px;
+  font-family: "Aeonik", sans-serif;
+  color: #333333;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+.middle_add_recipient .input {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+}
+.middle_add_recipient .inputs .country {
+  font-family: "Aeonik";
+  appearance: none;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 10px 73px;
+}
+.middle_add_recipient .inputs .currency {
+  font-family: "Aeonik";
+  appearance: none;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 10px 90px;
+}
+.middle_add_recipient .inputs  .recipient_type{
+  font-family: "Aeonik";
+  appearance: none;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 10px 115px;
+}
+.middle_add_recipient .inputs  .agent{
+  font-family: "Aeonik";
+  appearance: none;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255) !important;
+  padding: 10px 120px;
+}
+.middle_add_recipient .inputs input[type="text"] {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px 65px;
+  font-size: 0.875rem;
+  background-color: rgb(255, 255, 255) !important;
+}
+
+.add_recipient_box .bottom_add_recipient {
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  padding: 10px 20px 30px 10px;
+  gap: 10px;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  height: 20px;
+}
+.bottom_add_recipient .back_btn_add_recipient {
+  width: 70px;
+  height: 35px;
+  border: 1px solid #3d87f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #3d87f5;
+  background-color: #fff;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+}
+.for_btn_add_recipient {
+  width: 70px;
+  height: 35px;
+  color: white;
+  background-color: #3d87f5;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Aeonik", sans-serif;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+.exit_btn_add_recipient {
+  display: none;
+  z-index: 300;
+}
+@media only screen and (min-width: 900px) {
   .fixed-dropdown {
     display: none;
   }
+}
+@media only screen and (min-width: 750px) {
+ 
   .top {
     display: flex;
     justify-content: space-around;
@@ -1144,6 +1573,85 @@ body {
     left: 0;
   }
 
+  .swap_funds {
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    right: 0;
+    z-index: 300;
+  }
+  .swap_funds_box {
+    width: 350px;
+    border-radius: 10px;
+    height: 500px;
+  }
+  .swap_funds_box .Exit_swap_right {
+    display: none;
+  }
+  .exit_btn_swap {
+    display: block;
+    height: 25px;
+    padding: 4px 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin-left: 10px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    z-index: 300;
+  }
+  .swap_funds .overlaySwap {
+    background: rgba(46, 57, 83, 0.79);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 250;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+
+  .add_recipient {
+    position: fixed;
+    bottom: 5%;
+    left: 30%;
+    right: 0;
+    z-index: 300;
+  }
+  .add_recipient_box {
+    width: 350px;
+    border-radius: 10px;
+    height: 500px;
+  }
+  .add_recipient_box .Exit_add_recipient_right {
+    display: none;
+  }
+  .exit_btn_add_recipient {
+    display: block;
+    height: 25px;
+    padding: 4px 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin-left: 10px;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    z-index: 300;
+  }
+  .add_recipient .overlayaddrecipient {
+    background: rgba(46, 57, 83, 0.79);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 250;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
   .send_p2p {
     height: 500px;
     width: 350px;
@@ -1189,7 +1697,7 @@ body {
     right: 0;
     left: 0;
   }
-  .send_cash_box .overlay_cash{
+  .send_cash_box .overlay_cash {
     background: rgba(46, 57, 83, 0.79);
     display: flex;
     flex-direction: column;
@@ -1321,7 +1829,6 @@ body {
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
     z-index: 300;
   }
-  
 }
 @media only screen and (min-width: 1200px) {
   .dashboard {
@@ -1338,7 +1845,7 @@ body {
     flex-direction: column;
     width: 20%;
     height: 100vh;
-    background-image: url("svg/backgroungimg.svg");
+    background-image: url("./backgroungimg.svg");
     padding: 0px 15px 0px 16px;
     z-index: 100;
   }
@@ -1471,8 +1978,23 @@ body {
     border: none;
     position: relative;
     right: 50%;
+    background: none;
   }
   .Deposit_top_up_funds {
+    position: fixed;
+    bottom: 5%;
+    left: 45%;
+    right: 0;
+    z-index: 300;
+  }
+  .swap_funds {
+    position: fixed;
+    bottom: 5%;
+    left: 45%;
+    right: 0;
+    z-index: 300;
+  }
+  .add_recipient {
     position: fixed;
     bottom: 5%;
     left: 45%;

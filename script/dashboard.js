@@ -8,6 +8,8 @@ const beneficiariesPageBtn = document.querySelector(".beneficiaries-page-btn");
 const ReferralPageBtn = document.querySelector(".referral-page-btn");
 const ProfilePageBtn = document.querySelector(".profile-page-btn");
 const VirtualPageBtn = document.querySelector(".virtual-page-btn");
+const createInvoiceBtn = document.querySelector(".createinvoicebtn");
+const createInvoiceBtn2 = document.querySelector(".form-inv");
 //Start Home Section
 const sendGreyBtn = document.querySelector(".send_money");
 const DisplayForeignBox = document.querySelector(".create_foreign_acc");
@@ -28,7 +30,10 @@ const overlayCash = document.querySelector(".overlay_cash");
 const overlayBene = document.querySelector(".overlay_bene");
 const overlayRec = document.querySelector(".overlayRecipient");
 const overlaydeposit = document.querySelector(".overlayDeposit");
+const overlayswap = document.querySelector(".overlaySwap");
+const overlayAddRecipient = document.querySelector(".overlayaddrecipient");
 
+//End overlay
 const savedBeneBtn = document.querySelector(".sends_funds_two");
 const savedBeneBox = document.querySelector(".save_beneficiaries");
 const goBackToCashSec = document.querySelector(".go_back_left_bene");
@@ -60,19 +65,34 @@ const balSecLine3 = document.querySelector(".bal-title3");
 const balanceLine = document.querySelectorAll(".country");
 const balDepositBtn = document.querySelector(".deposit_btn_balance");
 const balSendBtn = document.querySelector(".send_btn");
-// const balSwapBtn = document.querySelector(".swap_btn");
+const balSwapBtn = document.querySelector(".swap_btn");
 const DisplaybalDepositBtn = document.querySelector(".Deposit_top_up_funds");
 const exitDepositMobile = document.querySelector(".Exit_top_up_right");
 const exitDepositDesktop = document.querySelector(".exit_btn_top_up");
 const cancelTopUpBtn = document.querySelector(".back_btn_top_up");
 
+const DisplaybalSwap = document.querySelector(".swap_funds");
+const exitSwapMobile = document.querySelector(".Exit_swap_right");
+const exitSwapDesktop = document.querySelector(".exit_btn_swap");
+const cancelSwapBtn = document.querySelector(".back_btn_swap");
 //End balance
+
+//beneficiaries
+const AddNewRecipientBtn = document.querySelector(".benefit-btn");
+const exitAddRecipientMobile = document.querySelector(
+  ".Exit_add_recipient_right"
+);
+const exitAddRecipientDesktop = document.querySelector(
+  ".exit_btn_add_recipient"
+);
+const cancelAddRecipientBtn = document.querySelector(".back_btn_add_recipient");
+const displayNewRecipient = document.querySelector(".add_recipient");
 
 //Start account
 
 const euroFormBtn = document.querySelector(".openeuroform");
 const usdFormBtn = document.querySelector(".openusdform");
-const GbpFormBtn = document.querySelector(".opengbpform"); 
+const GbpFormBtn = document.querySelector(".opengbpform");
 const requestAccForm = document.querySelector(".acc_form");
 const overlayacc = document.querySelector(".overlayacc");
 const AccExitbtn = document.querySelector(".acc_exit");
@@ -148,7 +168,11 @@ const BeneficiariesPage = document.querySelector(".body7");
 const ReferralPage = document.querySelector(".body8");
 const ProfilePage = document.querySelector(".body9");
 const VirtualPage = document.querySelector(".body10");
+const createinvoicepage = document.querySelector(".body11");
 const copyBtn = document.querySelector(".copy_btn");
+//create invoice
+ const showAddBtn = document.querySelector('.show-add')
+ const showAddBtnContent = document.querySelector('.showorhideclass')
 
 function showElement(element) {
   element.classList.remove("hide");
@@ -168,6 +192,7 @@ function navigateToPage(page, name) {
     ReferralPage,
     ProfilePage,
     VirtualPage,
+    createinvoicepage,
   ];
   pages.forEach((p) => {
     if (p === page) {
@@ -289,7 +314,14 @@ VirtualPageBtn.addEventListener("click", function (event) {
   event.preventDefault();
   navigateToPage(VirtualPage, "Virtual Card");
 });
-
+createInvoiceBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  navigateToPage(createinvoicepage, "Create invoice page");
+});
+createInvoiceBtn2.addEventListener("click", function (event) {
+  event.preventDefault();
+  navigateToPage(createinvoicepage, "Create invoice page");
+});
 //balance btn
 
 usdPageBtn.addEventListener("click", function () {
@@ -491,6 +523,57 @@ cancelTopUpBtn.addEventListener("click", () => {
   hideElement(overlaydeposit);
 });
 
+balSwapBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(DisplaybalSwap);
+  showElement(overlayswap);
+});
+
+exitSwapDesktop.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(DisplaybalSwap);
+  hideElement(overlayswap);
+});
+exitSwapMobile.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(DisplaybalSwap);
+  hideElement(overlayswap);
+});
+cancelSwapBtn.addEventListener("click", () => {
+  hideElement(DisplaybalSwap);
+  hideElement(overlayswap);
+});
+overlayswap.addEventListener("click", () => {
+  hideElement(DisplaybalSwap);
+  hideElement(overlayswap);
+});
+
+//beneficiaries
+AddNewRecipientBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  showElement(displayNewRecipient);
+  showElement(overlayAddRecipient);
+});
+
+exitAddRecipientDesktop.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(displayNewRecipient);
+  hideElement(overlayAddRecipient);
+});
+exitAddRecipientMobile.addEventListener("click", (event) => {
+  event.preventDefault();
+  hideElement(displayNewRecipient);
+  hideElement(overlayAddRecipient);
+});
+cancelAddRecipientBtn.addEventListener("click", () => {
+  hideElement(displayNewRecipient);
+  hideElement(overlayAddRecipient);
+});
+overlayAddRecipient.addEventListener("click", () => {
+  hideElement(displayNewRecipient);
+  hideElement(overlayAddRecipient);
+});
+
 //drop-menu
 dropHomePageBtn.addEventListener("click", function (event) {
   event.preventDefault();
@@ -531,6 +614,16 @@ dropVirtualPageBtn.addEventListener("click", function (event) {
   event.preventDefault();
   navigateToPage(VirtualPage, "Virtual Card");
 });
+
+showAddBtn.addEventListener('click', () => {
+  showAddBtnContent.classList.toggle('hide')
+  if(showAddBtn.textContent === 'Show additional detail'){
+    showAddBtn.textContent = 'Hide additional detail'
+  }
+  else{
+     showAddBtn.textContent = 'Show additional detail'
+  }
+})
 
 //Tab line
 tabline.forEach((item) => {
@@ -576,7 +669,7 @@ MB.forEach((Menu_bar) => {
 });
 
 balanceLine.forEach((bal_sec) => {
-  bal_sec.addEventListener("click", () => {
+  bal_sec.addEventListener("click", function () {
     balanceLine.forEach((bal_sec) => {
       bal_sec.classList.remove("bal_active");
     });

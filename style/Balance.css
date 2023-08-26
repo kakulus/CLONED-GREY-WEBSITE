@@ -28,7 +28,7 @@ body {
 }
 .Body3 {
   position: relative;
-  top: 150px;
+  top: 70px;
   padding: 10px;
 }
 .balance-section {
@@ -244,7 +244,7 @@ body {
 @media only screen and (min-width: 750px) {
   .Body3 {
     position: relative;
-    top: 210px;
+    top: 30px;
     padding: 10px;
   }
   .balance-section {
@@ -459,6 +459,8 @@ body {
 @media only screen and (min-width: 1200px) {
   .Body3 {
     display: block;
+    top: 130px;
+    padding: 10px;
   }
   .hidden {
     display: none;

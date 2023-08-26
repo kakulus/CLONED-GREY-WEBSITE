@@ -1,0 +1,531 @@
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Bold.otf");
+  font-weight: Bold;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Light.otf");
+  font-weight: Light;
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/AeonikTRIAL-Regular.otf");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background-color: #f7f7f7;
+}
+.hidden {
+  display: none;
+}
+.hide {
+  display: none;
+}
+.body11 {
+  position: relative;
+  top: 80px;
+  border-radius: 7px;
+  padding: 20px;
+}
+.invoice-body {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  min-height: 350px;
+  height: 100%;
+  border: 1px solid rgb(208, 208, 208);
+  border-radius: 6px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.invoice-text {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-text h3 {
+  font-family: "Aeonik", sans-serif;
+  font-size: 20px;
+  color: #333333;
+  margin: 0px 0px 8px;
+  font-weight: bold;
+}
+.invoice-text p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 14px;
+  color: #7d8698;
+  margin: 0px 0px 8px;
+  font-weight: 600;
+}
+.invoice-sel {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.invoice-sel .add-btn {
+  border-radius: 6px;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 18px;
+  background: rgb(255, 255, 255);
+  color: rgb(61, 135, 245);
+  border: 0.5px solid rgb(61, 135, 245);
+  align-self: center;
+  position: relative;
+  top: 20px;
+}
+.invoice-select {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.invoice-select p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 600;
+}
+.invoice-select select {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+}
+.invoice-email {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-email p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+}
+.invoice-email input[type="text"] {
+  cursor: not-allowed;
+  color: rgb(186, 186, 186);
+  border-radius: 10px;
+  background: rgb(242, 242, 242) !important;
+  border: 1px solid rgb(242, 242, 242) !important;
+  padding: 15px 170px;
+}
+.show-add {
+  border: none;
+  color: rgb(61, 135, 245);
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+.invoice-details {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-details h2 {
+  font-family: "Aeonik", sans-serif;
+  font-size: 20px;
+  color: #333333;
+  margin: 0px 0px 8px;
+  font-weight: bold;
+}
+.invoice-details label {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.invoice-tit {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-tit label {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.invoice-tit .inv-tit-inp{
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+}
+.invoice-tit .inv-tit-inp input[type="text"]{
+width: 100%;
+border: none;
+font-family: "Aeonik",sans-serif;
+position: relative;
+font-weight: 600;
+font-size: 17px;
+} 
+.invoice-details .inv-iqpa .inv-iqpa .price,.amount,.quantity {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+}
+
+
+/* .invoice-details input[type="text"] {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+} */
+.invoice-cur-dat {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.inv-currency {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 0px;
+}
+.inv-currency select {
+  align-self: center;
+  border: none;
+  background: none;
+  width: 100%;
+}
+.inv-curr .info{
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.inv-date {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+padding: 0px 40px;
+
+}
+.inv-date input[type='text']{
+  border: none;
+  align-self: center;
+  border: none;
+  background: none;
+  width: 100%;
+}
+.add-item {
+  border: none;
+  color: rgb(61, 135, 245);
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+
+.invoice-disount {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-disount .sub-total {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.sub-total p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+.sub-total span {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+.invoice-disount .discount {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.invoice-disount .Tax {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.invoice-disount .discount,
+.tax,
+p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0px;
+  color: #333333;
+}
+.invoice-disount .discount .tax,
+select {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+}
+.invoice-disount .discount .tax,
+input[type="text"] {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 400px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+  padding: 0px 40px;
+}
+.invoice-total {
+  display: flex;
+  flex-direction: column;
+}
+.invoice-total .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.total p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+.total span {
+  font-family: "Aeonik", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0px;
+  background: none;
+}
+.invoice-total input[type='text']{
+  padding: 0px 170px;
+  width: 100%;
+  text-align: left;
+}
+@media only screen and (min-width:750px){
+.invoice-tit .inv-tit-inp input[type='text']{
+  width: 100%;
+  height: 50px;
+}
+.invoice-disount .discount {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.invoice-disount .Tax {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: flex-end;
+}
+.invoice-disount .discount,
+.tax,
+p {
+  font-family: "Aeonik", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px 0px;
+  color: #333333;
+}
+.invoice-disount .discount .tax,
+select {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+width: 100px;
+}
+.invoice-disount .discount .tax,
+input[type="text"] {
+  font-family: "Aeonik";
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(230, 230, 230);
+  box-sizing: border-box;
+  width: 100px;
+  transition: background-color 0.3s ease 0s, width 0.5s ease 0s,
+    opacity 0.5s ease 0s, color 0.3s ease 0s;
+  overflow: hidden;
+  height: 50px;
+  letter-spacing: 0px;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 110%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(51, 51, 51);
+  border-radius: 8px !important;
+ 
+}
+.inv-iqpa{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.inv-iqpa .inv-des .description {
+  width: 100px;
+  padding: 0px 170px;
+}
+.hide {
+  display: none;
+}
+}
+@media only screen and (min-width:1200px){
+  .body11 {
+    position: relative;
+    top: 130px;
+    border-radius: 7px;
+  }
+  .hide {
+    display: none;
+  }
+}

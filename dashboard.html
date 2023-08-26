@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./style/virtual.css" />
     <link rel="stylesheet" href="./style/Referral.css" />
     <link rel="stylesheet" href="./style/profile.css" />
+    <link rel="stylesheet" href="./style/create-invoice.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -55,9 +56,7 @@
           <a href="" class="MB profile-page-btn"
             ><img src="svg/profile-icon.svg" alt="" /> Profile</a
           >
-          <a href="" class="MB"
-            ><img src="svg/logout-icon.svg" /> Logout</a
-          >
+          <a href="./index.html" class="MB"><img src="svg/logout-icon.svg" /> Logout</a>
         </div>
         <div class="nav-foot"><span>ON</span> Obazee Nelly</div>
       </div>
@@ -145,8 +144,8 @@
               </div>
             </div>
             <div class="bg-img">
-                <img src="svg/bakacc.svg" alt="" />
-              </div>
+              <img src="svg/bakacc.svg" alt="" />
+            </div>
           </div>
           <section class="balances">
             <div class="Balance">Balances</div>
@@ -260,7 +259,7 @@
                     <select>
                       <option value="">GBP</option>
                       <option value="">USD</option>
-                      <option value="">TZS</option>                     
+                      <option value="">TZS</option>
                     </select>
                   </div>
                 </div>
@@ -394,8 +393,8 @@
               <div class="request-countries usdbox">
                 <div class="rc">
                   <h3>
-                    <img src="svg/USD-round.ff186eaf.svg" alt="" /> United states
-                    Dollar
+                    <img src="svg/USD-round.ff186eaf.svg" alt="" /> United
+                    states Dollar
                   </h3>
                   <p>
                     Create a foreign account to receive payment in United states
@@ -432,7 +431,7 @@
                 <button class="invoice-title active btn3">Invoices</button>
                 <button class="invoice-title btn4">Customers</button>
               </div>
-              <div class="invoice-btn hide">
+              <div class="invoice-btn">
                 <div class="invoice-date">
                   <img src="svg/calender.svg" width="20px" />
                   <p>
@@ -445,12 +444,17 @@
                   </p>
                   <i class="fa fas-xmark"></i>
                 </div>
-                <button>Download</button>
+                <button class="createinvoicebtn">
+                  <p>create</p>
+                  <img src="./svg/plus-icon.svg" alt="" />
+                </button>
               </div>
             </div>
-            <div class="invoices-rec hide">
+            <div class="invoices-rec">
               <div class="rec-form">
-                <img src="svg/trans-rec.svg" alt="" />
+                <button class="form-inv">
+                  <span>create</span><img src="./svg/plus-icon.svg" alt="" />
+                </button>
                 You have not created any invoice yet
               </div>
             </div>
@@ -528,7 +532,10 @@
                     <option value="">EUR</option>
                   </select>
                 </div>
-                <div class="benefit-btn">Add recipient</div>
+                <div class="benefit-btn">
+                  <p>Add recipient</p>
+                  <img src="./svg/plus-icon.svg" alt="" />
+                </div>
               </div>
               <div class="benefit-record">
                 <div class="benefit-form">
@@ -667,6 +674,7 @@
                     <span class="checkmark"></span>
                     <p>Email</p>
                   </div>
+                  B
                 </div>
               </div>
               <div class="Transaction">
@@ -832,6 +840,125 @@
             </div>
             <div class="virtual-btn">
               Create virtual card <i class="fa-solid fa-plus"></i>
+            </div>
+          </div>
+        </section>
+        <section class="body11 hidden">
+          <div class="invoice-body">
+            <div class="invoice-text">
+              <h3>Your customers information</h3>
+              <p>Enter the recipients information to proceed</p>
+            </div>
+            <div class="invoice-sel">
+              <div class="invoice-select">
+                <p>Customers Name</p>
+                <select name="" id="">
+                  <option value="1">Select existing customers</option>
+                </select>
+              </div>
+              <button class="add-btn">
+                Add <img src="./svg/plus-icon.svg" alt="" />
+              </button>
+            </div>
+
+            <div class="invoice-email">
+              <p>Customers email address</p>
+              <input type="text" />
+            </div>
+
+            <button class="show-add">Show additional detail</button>
+
+            <div class="showorhideclass hide ">
+              <div class="invoice-details">
+                <h2>Invoice Details</h2>
+                <label for=""
+                  >Enter the following details to finish creating your
+                  invoice</label
+                >
+                <div class="invoice-tit">
+                  <label for="">Invoice Title</label>
+                  <div class="inv-tit-inp">
+                    <input type="text" placeholder="Enter Title of invoice" />
+                  </div>
+                </div>
+                <div class="invoice-cur-dat">
+                  <div class="inv-curr">
+                    <label for="currency">Currency</label>
+                    <div class="inv-currency">
+                      <select name="" id=""></select>
+                    </div>
+                    <p class="info">
+                      <span></span>Your account details will be attached to the
+                      invoice
+                    </p>
+                  </div>
+                  <div class="inv-dat">
+                    <label for="Due Date">Due Date</label>
+                    <div class="inv-date">
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="inv-iqpa">
+                  <div class="inv-des">
+                    <label for="">item description</label>
+                    <input
+                      type="text"
+                      placeholder=" Enter item description"
+                      class="description"
+                    />
+                  </div>
+                  <div class="inv-qty">
+                    <label for="">Qty</label>
+                    <input type="text" placeholder="0" class="quantity" />
+                  </div>
+                  <div class="inv-price">
+                    <label for="">Price</label>
+                    <input type="text" placeholder="0.00" class="price" />
+                  </div>
+                  <div class="inv-amount">
+                    <label for="">Amount</label>
+                    <input type="text" placeholder="0.00" class="amount" />
+                  </div>
+                </div>
+
+                <button class="add-item">Add additional item</button>
+              </div>
+
+              <div class="invoice-disount">
+                <hr />
+                <div class="sub-total">
+                  <p>Subtotal</p>
+                  <span>0.00</span>
+                </div>
+                <hr />
+                <div class="discount">
+                  <p>Discount</p>
+                  <select name="discountType" id="discountType"></select>
+                  <input type="text" placeholder="0.00" />
+                  <input type="text" placeholder="0.00" />
+                </div>
+                <div class="Tax">
+                  <p>Tax</p>
+                  <select name="discountType" id="discountType"></select>
+                  <input type="text" placeholder="0.00" />
+                  <input type="text" placeholder="0.00" />
+                </div>
+              </div>
+
+              <div class="invoice-total">
+                <hr />
+                <div class="total">
+                  <p>Total</p>
+                  <span>0.00</span>
+                </div>
+                <hr />
+                <p>Additional Notes</p>
+                <input
+                  type="text"
+                  placeholder="Enter any additional information you may have "
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -1087,22 +1214,20 @@
         </form>
 
         <!-- Deposit section -->
-  
+
         <form action="" class="Deposit_top_up_funds hide">
           <div class="top_up_funds_box">
-           
-              <div class="exit_main_top_up">
-                <div class="go_back_left_top_up">
-                  <div class="go_icon_top_up">
-                    <img src="svg/return.svg" alt="" />
-                  </div>
-                  <p>Top-up Funds</p>
+            <div class="exit_main_top_up">
+              <div class="go_back_left_top_up">
+                <div class="go_icon_top_up">
+                  <img src="svg/return.svg" alt="" />
                 </div>
-                <div class="Exit_top_up_right">
-                  <i class="fa-solid fa-xmark"></i>
-                </div>
+                <p>Top-up Funds</p>
               </div>
-          
+              <div class="Exit_top_up_right">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
 
             <div class="middle_top_up">
               <div class="inputs">
@@ -1168,15 +1293,13 @@
             <div class="acc_confirm">
               <h4>Confirm your name</h4>
               <p>
-                Kindly confirm that the details below are correct to enable
-                you create your foreign
-                <span class="acc_chg1"></span> account.Please contact
-                support if it's not.
+                Kindly confirm that the details below are correct to enable you
+                create your foreign
+                <span class="acc_chg1"></span> account.Please contact support if
+                it's not.
               </p>
             </div>
-            <div class="acc_form1">
-              First Name <span>Obazee Nelly</span>
-            </div>
+            <div class="acc_form1">First Name <span>Obazee Nelly</span></div>
             <div class="acc_form2">Last name <span>Osaniga</span></div>
             <div class="acc_submit">
               Get
@@ -1190,6 +1313,155 @@
           </div>
           <div class="overlayacc hide"></div>
         </div>
+        <form action="" class="swap_funds hide">
+          <div class="swap_funds_box">
+            <div class="exit_main_swap">
+              <div class="go_back_left_swap">
+                <div class="go_icon_swap">
+                  <img src="svg/recycle.svg" alt="" />
+                </div>
+                <p>Swap Funds</p>
+              </div>
+              <div class="Exit_swap_right">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+
+            <div class="middle_swap">
+              <div class="inputs">
+                <label for="">Balance to transfer from</label>
+                <div class="input">
+                  <select
+                    name=""
+                    id=""
+                    aria-placeholder="Select wallet"
+                  ></select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Balance to transfer to</label>
+                <div class="input">
+                  <select
+                    name=""
+                    id=""
+                    aria-placeholder="Select wallet"
+                  ></select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Amount to swap</label>
+                <div class="input">
+                  <input type="text" placeholder="$ 0.00" />
+                </div>
+              </div>
+
+              <div class="inputs">
+                <label for="">Amount you'll receive</label>
+                <div
+                  class="input"
+                  style="background: rgb(242, 242, 242)"
+                  readonly
+                >
+                  <input type="text" placeholder="$ 0.00" readonly />
+                </div>
+              </div>
+              <div class="inputs">
+                <input type="checkbox" name="" id="" />
+                <p>I confirm to be debited <span>$0</span> to my balance</p>
+              </div>
+            </div>
+
+            <div class="bottom_swap">
+              <button class="back_btn_swap">Cancel</button>
+              <button class="for_btn_swap">Proceed</button>
+            </div>
+          </div>
+          <div class="exit_btn_swap">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlaySwap hide"></div>
+        </form>
+
+        <form action="" class="add_recipient hide">
+          <div class="add_recipient_box">
+            <div class="exit_main_add_recipient">
+              <div class="go_back_left_add_recipient">
+                <div class="go_icon_add_recipient">
+                  <img src="svg/return.svg" alt="" />
+                </div>
+                <p>Add New Recipient</p>
+              </div>
+              <div class="Exit_add_recipient_right">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+
+            <div class="middle_add_recipient">
+              <div class="inputs">
+                <label for="">Select balance to top-up</label>
+                <div class="input">
+                  <select class="currency">
+                    <option disabled="" value="">
+                      Select recipient’s currency
+                    </option>
+                    <option value="EGP">EGP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="KES">KES</option>
+                    <option value="NGN">NGN</option>
+                    <option value="TZS">TZS</option>
+                    <option value="UGX">UGX</option>
+                    <option value="USD">USD</option>
+                  </select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Select Recipient's Country</label>
+                <div class="input">
+                  <select class="country">
+                    <option disabled="" value="" class="default-option">
+                      Select recipient account country
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Recipient Type</label>
+                <div class="input">
+                  <select class="recipient_type">
+                    <option disabled="" value="">Select a recipient</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="inputs">
+                <label for="">Select Agent</label>
+                <div class="input">
+                  <select class="agent">
+                    <option disabled="" value="" class="default-option">
+                      Select an agent
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="inputs">
+                <label for="">Phone number</label>
+                <div class="input">
+                  <input type="text" placeholder="Enter Phone number" />
+                </div>
+              </div>
+            </div>
+
+            <div class="bottom_add_recipient">
+              <button class="back_btn_add_recipient">Cancel</button>
+              <button class="for_btn_add_recipient">Proceed</button>
+            </div>
+          </div>
+          <div class="exit_btn_add_recipient">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+          </div>
+          <div class="overlayaddrecipient hide"></div>
+        </form>
       </div>
     </div>
     <script src="./script/dashboard.js"></script>

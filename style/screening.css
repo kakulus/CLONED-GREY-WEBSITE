@@ -16,7 +16,7 @@
   list-style: none;
 }
 body {
-  background-image: url("svg/backgroungimg.svg");
+  background-image: url("./backgroungimg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -120,7 +120,7 @@ hr {
   padding: 12px 107px;
   border-radius: 8px;
   margin-top: 5px;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 20px;
   color: #222;
 }
@@ -130,7 +130,7 @@ hr {
   background: rgb(255, 255, 255);
   border: 1px solid rgb(229, 233, 241);
   box-sizing: border-box;
-  padding: 12px ;
+  padding: 12px;
   width: 340px;
   border-radius: 8px;
   margin-top: 5px;
@@ -147,7 +147,7 @@ input[type="date"] {
   background: rgb(255, 255, 255);
   border: 1px solid rgb(229, 233, 241);
   box-sizing: border-box;
-  padding: 12px 89px;
+  padding: 12px 70px;
   border-radius: 8px;
   margin-top: 5px;
   margin-left: 10px;
@@ -358,7 +358,7 @@ padding: 10px;
     background: rgb(255, 255, 255);
     border: 1px solid rgb(229, 233, 241);
     box-sizing: border-box;
-    padding: 12px 145px;
+    padding: 12px 125px;
     border-radius: 8px;
     margin-top: 5px;
     margin-left: 13px;
